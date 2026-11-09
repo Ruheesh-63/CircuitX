@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eaf4ff">
+  <meta name="description" content="CircuitX: Arduino, ESP32, IoT and smart technology project showcase.">
+  <title>CircuitX | Smart Tech & Arduino</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="liquid-glass.css">
+  <link rel="stylesheet" href="spark-free.css">
+  <script type="module" src="src/app.js"></script>
+</head>
+<body>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+  <div class="ambient ambient-c" aria-hidden="true"></div>
+  <div class="liquid-aurora" aria-hidden="true"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <header class="site-header glass-shell">
+    <a class="brand" href="#home" aria-label="CircuitX Home">
+      <span class="brand-mark"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M35 11H20a13 13 0 0 0 0 26h15" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><circle cx="34" cy="11" r="4"/><circle cx="34" cy="37" r="4"/><path d="M31 24h11" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="42" cy="24" r="3"/></svg></span>
+      <span><strong>Circuit<span class="accent">X</span></strong><small data-i18n="brandSubtitle">Ideas into innovation</small></span>
+    </a>
+    <nav id="nav" class="nav" aria-label="Main navigation">
+      <a href="#home" data-i18n="navHome">Home</a>
+      <a href="#services" data-i18n="navServices">Solutions</a>
+      <a href="#projects" data-i18n="navProjects">Projects</a>
+      <a href="#gallery" data-i18n="galleryNav">Gallery</a>
+      <a href="#why" data-i18n="navAbout">Why CircuitX</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button id="langBtn" type="button" class="chip" aria-label="Switch language">தமிழ்</button>
+      <button id="themeBtn" type="button" class="icon-btn" aria-label="Toggle dark theme">☾</button>
+      <button id="adminBtn" type="button" class="soft-btn small" data-i18n="dashboard" hidden>Dashboard</button>
+      <button id="authBtn" type="button" class="primary-btn small" data-i18n="login">Login</button>
+      <button id="menuBtn" class="icon-btn menu-btn" type="button" aria-controls="nav" aria-expanded="false" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+  <div id="firebaseStatus" class="firebase-status" role="status" aria-live="polite" hidden></div>
+
+  <main>
+    <section id="home" class="hero container">
+      <div class="hero-copy"><span class="hero-visual-topline">✦ &nbsp; CIRCUITX / THE MAKER STUDIO</span>
+        <div class="eyebrow"><span class="pulse-dot"></span><span data-i18n="heroBadge">ARDUINO · ESP32 · SMART IoT</span></div>
+        <h1 data-i18n="heroTitle">Smarter Ideas.<br>Connected Future.</h1>
+        <p class="lead" data-i18n="heroText">Discover practical Arduino projects, ESP32 builds, IoT automation and smart farming solutions, all in one beautiful space.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#projects"><span data-i18n="exploreProjects">Explore Projects</span><span aria-hidden="true"> ↗</span></a>
+          <a class="soft-btn" href="#services" data-i18n="ourSolutions">Our Solutions</a>
+        </div>
+        <div class="hero-proof"><span class="mini-chip">⚡ <span data-i18n="freeIdeas">Project inspiration</span></span><span class="mini-chip">🔧 <span data-i18n="makerFriendly">Maker friendly</span></span><span class="mini-chip">🌐 <span data-i18n="twoLanguages">Tamil + English</span></span></div>
+      </div>
+      <div class="hero-art" aria-label="Smart city, connected home and technology illustration">
+        <div class="scene-plate"><div class="scene-glint" aria-hidden="true"></div><img src="assets/smart-city.svg" alt="Illustration of a smart city with IoT connectivity, laptop and smart farming" loading="eager"></div>
+        <div class="float-pill float-pill-a"><span>◉</span> <span>IoT <b>ONLINE</b></span></div>
+        <div class="float-pill float-pill-b"><span>🌱</span> <span data-i18n="smartFarming">Smart farming</span></div><div class="float-pill float-pill-c"><span class="signal-circle">↗</span><span>LIVE SYSTEMS<br><b>BUILD • CONNECT</b></span></div>
+      </div>
+    </section>
+
+    <section class="stats-section container" aria-label="CircuitX at a glance">
+      <div class="stat-box glass-shell reveal"><strong id="projectStat" data-target="0">0</strong><span data-i18n="statProjects">Project previews</span></div>
+      <div class="stat-box glass-shell reveal"><strong id="categoryStat" data-target="0">0</strong><span data-i18n="statCategories">Tech categories</span></div>
+      <div class="stat-box glass-shell reveal"><strong id="languageStat" data-target="2">0</strong><span data-i18n="statLanguages">Languages</span></div>
+    </section>
+
+    <section id="services" class="section container">
+      <div class="section-head"><div><span class="overline" data-i18n="whatWeCreate">WHAT WE CREATE</span><h2 data-i18n="servicesTitle">Explore smart solutions</h2></div><p data-i18n="servicesIntro">From greenhouses to smart homes, make technology useful in the real world.</p></div>
+      <div class="services-grid">
+        <article class="service-card glass-shell"><div class="service-art art-home">🏡<i></i></div><div class="card-body"><h3 data-i18n="serviceHome">Smart Home</h3><p data-i18n="serviceHomeText">Control lights, fans and everyday devices.</p></div></article>
+        <article class="service-card glass-shell"><div class="service-art art-farm">🌱<i></i></div><div class="card-body"><h3 data-i18n="serviceFarm">Smart Farming</h3><p data-i18n="serviceFarmText">Automate irrigation and monitor soil health.</p></div></article>
+        <article class="service-card glass-shell"><div class="service-art art-city">🏙️<i></i></div><div class="card-body"><h3 data-i18n="serviceCity">IoT Monitoring</h3><p data-i18n="serviceCityText">Understand sensor data as it happens.</p></div></article>
+        <article class="service-card glass-shell"><div class="service-art art-robot">🤖<i></i></div><div class="card-body"><h3 data-i18n="serviceRobot">Robotics</h3><p data-i18n="serviceRobotText">Build creative robots and automation ideas.</p></div></article>
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <div class="section-head"><div><span class="overline" data-i18n="buildLibrary">BUILD LIBRARY</span><h2 data-i18n="projectsTitle">Featured projects</h2></div><p data-i18n="projectsIntro">Search, filter and discover your next build.</p></div>
+      <div class="project-toolbar glass-shell">
+        <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" data-placeholder="searchPlaceholder" placeholder="Search Arduino, ESP32, greenhouse..." autocomplete="off"><span class="sr-only" data-i18n="searchLabel">Search projects</span></label>
+        <label class="select-wrap"><span class="sr-only" data-i18n="levelLabel">Difficulty</span><select id="levelFilter"><option value="all" data-i18n="allLevels">All levels</option><option value="beginner" data-i18n="beginner">Beginner</option><option value="intermediate" data-i18n="intermediate">Intermediate</option><option value="advanced" data-i18n="advanced">Advanced</option></select></label>
+      </div>
+      <div id="filterButtons" class="filter-buttons" role="group" aria-label="Project category filters"></div>
+      <div class="results-row"><span id="resultsCount" aria-live="polite"></span><span id="demoNotice" class="demo-notice" data-i18n="demoNote">Preview projects. Connect Firebase to publish real projects.</span></div>
+      <div id="projectsGrid" class="projects-grid" aria-live="polite"></div>
+      <div id="emptyResults" class="empty-state glass-shell" hidden><span>🔎</span><h3 data-i18n="noProjects">No projects found</h3><p data-i18n="tryDifferent">Try a different search or category.</p></div>
+    </section>
+
+    <section id="gallery" class="section container">
+      <div class="section-head"><div><span class="overline" data-i18n="galleryEyebrow">TECH IN FRAMES</span><h2 data-i18n="galleryTitle">Project image gallery</h2></div><p data-i18n="galleryIntro">A closer look at our creations and project previews.</p></div>
+      <div id="galleryGrid" class="gallery-grid"></div>
+    </section>
+
+    <section id="why" class="section container"><div class="section-head centered"><span class="overline" data-i18n="whyEyebrow">WHY CIRCUITX?</span><h2 data-i18n="whyTitle">Made for curious minds</h2><p data-i18n="whySubtitle">A better place for your next electronics adventure.</p></div><div class="features-grid">
+      <div class="feature glass-shell"><div class="feature-icon">📡</div><h3 data-i18n="featureLive">Real-world IoT</h3><p data-i18n="featureLiveText">Discover ideas built around sensors and connectivity.</p></div>
+      <div class="feature glass-shell"><div class="feature-icon">📁</div><h3 data-i18n="featureFiles">Code downloads</h3><p data-i18n="featureFilesText">Get files for projects when authors provide them.</p></div>
+      <div class="feature glass-shell"><div class="feature-icon">🛡️</div><h3 data-i18n="featureSafe">Verified accounts</h3><p data-i18n="featureSafeText">Email verification and admin-only publishing.</p></div>
+      <div class="feature glass-shell"><div class="feature-icon">🗣️</div><h3 data-i18n="featureLang">Two languages</h3><p data-i18n="featureLangText">Explore in English or Tamil with one tap.</p></div>
+    </div></section>
+
+    <section id="contact" class="section container">
+      <div class="cta glass-shell reveal"><div><span class="overline" data-i18n="haveIdea">HAVE AN IDEA?</span><h2 data-i18n="ctaTitle">Let’s build something brilliant.</h2><p data-i18n="ctaText">Share your idea with our team.</p></div><a class="primary-btn" href="#projects" data-i18n="browseLibrary">Browse project library</a></div>
+      <div class="contact-layout">
+        <div class="contact-copy reveal"><span class="overline" data-i18n="contactEyebrow">LET'S CONNECT</span><h2 data-i18n="contactTitle">Tell us about your next build</h2><p data-i18n="contactDescription">Sign in with a verified account to send a message to our team securely.</p><div class="contact-tag">📡 Arduino & ESP32</div><div class="contact-tag">🌱 Smart farming</div><div class="contact-tag">⚡ IoT innovation</div></div>
+        <form id="contactForm" class="contact-panel glass-shell reveal">
+          <label class="field"><span data-i18n="contactName">Your name</span><input name="name" type="text" maxlength="90" autocomplete="name" required></label>
+          <label class="field"><span data-i18n="contactMessage">Project idea or message</span><textarea name="message" rows="5" minlength="10" maxlength="2000" required></textarea></label>
+          <p class="fine-print" data-i18n="contactSignIn">Only signed-in, email-verified users can submit messages.</p>
+          <button id="contactSubmit" type="submit" class="primary-btn full" data-i18n="sendMessage">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container"><div class="footer-brand"><strong>Circuit<span class="accent">X</span></strong><span data-i18n="footerLine">Create · Connect · Innovate</span></div><span>© <span id="year">2026</span> CircuitX</span><a href="#home" data-i18n="backTop">Back to top ↑</a></footer>
+
+  <aside id="verifyBanner" class="verify-banner glass-shell" hidden><div><strong data-i18n="verifyNeeded">Verify your email</strong><span data-i18n="verifyBody">Open your inbox, click the verification link, then check again.</span></div><div class="verify-actions"><button id="resendBtn" class="soft-btn small" data-i18n="resend">Resend email</button><button id="checkVerifiedBtn" class="primary-btn small" data-i18n="checkVerified">I've verified</button></div></aside>
+
+  <dialog id="authDialog" class="modal glass-shell" aria-labelledby="authTitle"><form id="authForm" class="modal-inner"><div class="modal-head"><div><span class="overline">CIRCUITX ACCOUNT</span><h2 id="authTitle" data-i18n="welcomeBack">Welcome back</h2></div><button type="button" class="icon-btn close-modal" data-close="authDialog" aria-label="Close">✕</button></div><div class="tabs" role="group"><button type="button" id="loginTab" class="tab active" data-i18n="login">Login</button><button type="button" id="registerTab" class="tab" data-i18n="register">Sign up</button></div><label class="field"><span data-i18n="email">Email address</span><input id="emailInput" type="email" required autocomplete="email" maxlength="254" placeholder="name@example.com"></label><label class="field"><span data-i18n="password">Password</span><input id="passwordInput" type="password" required autocomplete="current-password" minlength="6" maxlength="128"></label><p id="authHelp" class="fine-print" data-i18n="authHelp">Log in with your Firebase account.</p><button id="authSubmit" class="primary-btn full" type="submit" data-i18n="login">Login</button><div class="auth-separator" data-i18n="orContinue">or continue with</div><p id="authStatus" class="auth-feedback" role="alert" hidden></p><button id="retryFirebaseBtn" class="text-btn" type="button" hidden>↻ Retry Firebase connection</button>
+    <button id="googleBtn" type="button" class="google-btn"><span class="google-g" aria-hidden="true">G</span><span data-i18n="googleLogin">Continue with Google</span></button><button id="forgotBtn" class="text-btn" type="button" data-i18n="forgotPassword">Forgot password?</button></form></dialog>
+
+  <dialog id="projectDialog" class="modal project-modal glass-shell" aria-labelledby="projectModalTitle"><div class="modal-inner"><div class="modal-head"><span class="overline" data-i18n="projectDetails">PROJECT DETAILS</span><button type="button" class="icon-btn close-modal" data-close="projectDialog" aria-label="Close">✕</button></div><div id="projectModalArt" class="detail-art"></div><div id="projectModalMeta" class="project-meta"></div><h2 id="projectModalTitle"></h2><p id="projectModalDescription" class="detail-desc"></p><div id="projectModalTags" class="tags"></div><div class="detail-actions"><button id="projectDownload" type="button" class="primary-btn" hidden data-i18n="downloadCode">Download code</button><span id="projectNoDownload" class="fine-print" data-i18n="noDownload">Code file is not available for this project yet.</span></div></div></dialog>
+
+  <dialog id="adminDialog" class="modal admin-modal glass-shell" aria-labelledby="adminTitle"><div class="modal-inner"><div class="modal-head"><div><span class="overline" data-i18n="adminEyebrow">ADMIN ONLY</span><h2 id="adminTitle" data-i18n="adminTitle">Project dashboard</h2></div><button type="button" class="icon-btn close-modal" data-close="adminDialog" aria-label="Close">✕</button></div><p class="fine-print" data-i18n="adminIntro">Publish projects with a verified, approved admin account.</p><form id="projectForm" class="admin-form"><div class="field-grid"><label class="field"><span data-i18n="titleEn">Project title (English)</span><input name="titleEn" required maxlength="100"></label><label class="field"><span data-i18n="titleTa">Project title (Tamil)</span><input name="titleTa" maxlength="100"></label></div><div class="field-grid"><label class="field"><span data-i18n="descEn">Description (English)</span><textarea name="descriptionEn" rows="3" required maxlength="2000"></textarea></label><label class="field"><span data-i18n="descTa">Description (Tamil)</span><textarea name="descriptionTa" rows="3" maxlength="2000"></textarea></label></div><div class="field-grid"><label class="field"><span data-i18n="category">Category</span><select name="category"><option value="farming" data-i18n="catFarming">Smart Farming</option><option value="home" data-i18n="catHome">Smart Home</option><option value="iot" data-i18n="catIot">IoT</option><option value="robotics" data-i18n="catRobotics">Robotics</option><option value="electronics" data-i18n="catElectronics">Electronics</option></select></label><label class="field"><span data-i18n="difficulty">Difficulty</span><select name="level"><option value="beginner" data-i18n="beginner">Beginner</option><option value="intermediate" data-i18n="intermediate">Intermediate</option><option value="advanced" data-i18n="advanced">Advanced</option></select></label></div><label class="field"><span data-i18n="tagsLabel">Tags (comma separated)</span><input name="tags" maxlength="300" placeholder="Arduino, ESP32, LoRa"></label><div class="field-grid"><label class="field"><span data-i18n="coverFile">Cover image (optional; max 2 MB)</span><input name="cover" type="file" accept="image/png,image/jpeg,image/webp"></label><label class="field"><span data-i18n="codeFile">Arduino source file (optional; UTF-8, max 80 KB)</span><input name="code" type="file" accept=".ino,.cpp,.h,.txt,.md,.json,.py"></label></div><label class="field code-paste"><span data-i18n="pasteCode">Or paste Arduino code (instead of selecting a file)</span><textarea name="codeText" rows="7" maxlength="100000" spellcheck="false" class="code-editor" placeholder="// setup() and loop()..."></textarea></label><p class="fine-print" data-i18n="fileReminder">Spark Free: only small UTF-8 source files, protected inside Firestore. ZIP/PDF are not supported.</p><button id="publishBtn" class="primary-btn full" type="submit" data-i18n="publish">Publish project</button></form><div class="admin-list-head"><h3 data-i18n="publishedProjects">Published projects</h3><button id="refreshBtn" type="button" class="soft-btn small" data-i18n="refresh">Refresh</button></div><div id="adminList" class="admin-list"></div><div class="admin-list-head"><h3 data-i18n="inboxTitle">Contact inbox</h3><button id="refreshInboxBtn" type="button" class="soft-btn small" data-i18n="refresh">Refresh</button></div><div id="inboxList" class="admin-list"></div></div></dialog>
+<script>
+  // Safety net: show an actionable message when src/app.js never executes.
+  setTimeout(() => {
+    if (!window.__circuitxModuleReady) {
+      const box = document.getElementById('firebaseStatus');
+      if (box) {
+        box.hidden = false;
+        box.textContent = 'CircuitX JavaScript did not start. Open VS Code > circketx-website folder, run index.html with Live Server, check src/app.js exists, then open Chrome F12 > Console.';
+      }
+    }
+  }, 6000);
+</script>
+</body>
+</html>

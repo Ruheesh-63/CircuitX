@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**", "rules/**", "README_SETUP.md", "TEST_CHECKLIST.md", "SECURITY_TESTS.md"],
+    "headers": [
+      {"source": "**/*.js", "headers": [{"key": "Cache-Control", "value": "public,max-age=600"}]}
+    ]
+  },
+  "firestore": {"rules": "rules/firestore.rules"}
+}

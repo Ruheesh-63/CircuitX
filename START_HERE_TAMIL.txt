@@ -1,0 +1,19 @@
+CircuitX Premium - Spark FREE Version (Firestore-only)
+
+1) ZIP Extract All -> CircuitX-Website folder-ஐ VS Code-ல் Open செய்க.
+2) index.html -> Go Live. Chrome: http://localhost:5500/index.html
+3) முதலில் Firebase Console -> Cloud Firestore -> Rules சென்று
+   ZIP-இல் உள்ள rules/firestore.rules முழுவதையும் Publish செய்யவும்.
+4) Google Login மூலம் ruheeshruheesh5@gmail.com-ல் உள்நுழையவும்.
+5) Firestore admins collection -> document ID = உங்க Firebase UID -> active (boolean)=true.
+6) Website Refresh -> Dashboard -> Arduino .ino file (UTF-8, max 80 KB)
+   அல்லது text code paste செய்து Project Publish செய்யலாம்.
+7) Verified login செய்த users மட்டும் Code Download செய்யலாம்.
+8) NO Blaze Plan, NO Firebase Storage, NO CORS setup.
+
+முக்கியம்:
+- Firebase web config src/firebase-config.js-ல் ஏற்கனவே உள்ளது.
+- ZIP/PDF/பெரிய binary files இந்த version-ல் support இல்லை.
+- பழைய Storage-ல் இருக்கும் code files தானாக migrate ஆகாது;
+  சிறிய Arduino source text code-ஐ மீண்டும் Upload செய்ய வேண்டும்.
+- முழு விவரம் README_SETUP.md-ல் இருக்கிறது.
