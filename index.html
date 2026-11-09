@@ -4,13 +4,328 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eaf4ff">
-  <meta name="description" content="CircuitX: Arduino, ESP32, IoT and smart technology project showcase.">
+  <meta name="description" content="CircuitX: a liquid-glass Arduino, ESP32, IoT & smart farming maker studio, in English and Tamil.">
   <title>CircuitX | Smart Tech & Arduino</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="liquid-glass.css">
-  <link rel="stylesheet" href="spark-free.css">
-  <script type="module" src="src/app.js"></script>
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJiIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iIzY5YjVmZiIvPjxzdG9wIG9mZnNldD0iLjY1IiBzdG9wLWNvbG9yPSIjMzI2ZGVhIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNzY0Y2U4Ii8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSJ3aGl0ZSIgc3RvcC1vcGFjaXR5PSIuOTUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNkZGZhZmYiIHN0b3Atb3BhY2l0eT0iLjcyIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTkiIGZpbGw9InVybCgjYikiLz48cmVjdCB4PSIyIiB5PSIyIiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHJ4PSIxNyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLW9wYWNpdHk9Ii41OCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBhdGggZD0iTTQyIDE5SDI5YTEzIDEzIDAgMCAwIDAgMjZoMTMiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnKSIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSI0MiIgY3k9IjE5IiByPSIzLjYiIGZpbGw9IndoaXRlIi8+PGNpcmNsZSBjeD0iNDIiIGN5PSI0NSIgcj0iMy42IiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0zNyAzMmgxMyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjMyIiByPSIyLjgiIGZpbGw9IndoaXRlIi8+PC9zdmc+" type="image/svg+xml">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+:root{color-scheme:light;--ink:#112e4c;--muted:#56728f;--blue:#0783ed;--blue-deep:#0967d3;--line:rgba(255,255,255,.8);--glass:rgba(255,255,255,.54);--glass-strong:rgba(255,255,255,.7);--shadow:0 15px 38px rgba(23,102,167,.09),inset 0 1px 0 rgba(255,255,255,.8);--bg:#eaf6ff;--radius:24px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:118px}body{margin:0;overflow-x:hidden;min-height:100vh;color:var(--ink);background:linear-gradient(150deg,#f7fbff 0%,#e8f5ff 36%,#f1faff 72%,#e0f2ff 100%);font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif}h1,h2,h3,p{margin-top:0}h1,h2,h3,strong{font-family:'Outfit','DM Sans',sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #35a9ff;outline-offset:3px}a,button{transition:transform .2s ease,background .2s ease,box-shadow .2s ease}a:hover,button:hover{transform:translateY(-1px)}[hidden]{display:none!important}.sr-only{position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;overflow:hidden;white-space:nowrap}.container{max-width:1220px;width:calc(100% - 48px);margin-inline:auto}.ambient{position:fixed;pointer-events:none;z-index:-2;filter:blur(58px);opacity:.52;border-radius:50%;animation:drift 12s ease-in-out infinite alternate}.ambient-a{left:-160px;top:130px;width:450px;height:460px;background:#a8dcff}.ambient-b{right:-160px;top:420px;width:490px;height:490px;background:#a3e4ff;animation-delay:-4s}.ambient-c{left:33%;top:950px;width:350px;height:340px;background:#b9d5ff;animation-delay:-7s}@keyframes drift{to{transform:translate(25px,-38px) scale(1.1)}}
+.glass-shell{background:var(--glass);border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(24px) saturate(170%);-webkit-backdrop-filter:blur(24px) saturate(170%);position:relative}.glass-shell::before{content:'';position:absolute;z-index:0;inset:1px;pointer-events:none;border-radius:inherit;background:linear-gradient(144deg,rgba(255,255,255,.38),rgba(255,255,255,0) 48%,rgba(255,255,255,.12))}.glass-shell>*{position:relative;z-index:1}.site-header{position:sticky;top:14px;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1320px;width:calc(100% - 48px);margin:16px auto 0;padding:12px 20px;border-radius:22px}.brand{display:flex;align-items:center;gap:9px;flex-shrink:0}.brand-mark{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#159fe9,#0466c9);color:#fff;box-shadow:0 7px 16px #0b82e33b}.brand-mark svg{width:29px;height:29px}.brand strong{display:block;font-size:22px;letter-spacing:-1px;line-height:1}.brand small{display:block;font-size:10px;font-weight:700;color:var(--muted);margin-top:5px;letter-spacing:.3px}.accent{color:var(--blue)}.nav{display:flex;gap:28px;align-items:center}.nav a{color:var(--muted);font-size:13px;font-weight:800;white-space:nowrap}.nav a:hover{color:var(--blue)}.header-actions{display:flex;gap:8px;align-items:center}.chip,.icon-btn,.soft-btn{border:1px solid rgba(255,255,255,.9);background:rgba(255,255,255,.68);color:var(--ink);box-shadow:0 3px 11px rgba(30,106,168,.07);font-weight:700}.chip{border-radius:12px;padding:11px 13px;font-size:12px;white-space:nowrap}.icon-btn{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;font-size:19px}.primary-btn{border:0;border-radius:12px;background:linear-gradient(110deg,#1474dc,#0696ef);color:#fff;font-weight:800;font-size:13px;padding:15px 21px;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 10px 24px rgba(15,112,214,.24);white-space:nowrap}.primary-btn:hover{box-shadow:0 13px 28px rgba(15,112,214,.34)}.primary-btn.small,.soft-btn.small{padding:11px 15px;font-size:12px}.soft-btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:15px 20px;font-size:13px}.menu-btn{display:none}
+.hero{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:10px;min-height:490px;padding-block:48px 60px;position:relative}.hero:before{position:absolute;content:'';width:88%;height:90%;top:6%;left:6%;z-index:-1;border-radius:70px;background:radial-gradient(ellipse at 77% 44%,rgba(114,197,255,.43),transparent 59%)}.hero-copy{position:relative;z-index:2;padding:0 0 0 13px}.eyebrow,.overline{font-size:11px;letter-spacing:2px;font-weight:800;color:var(--blue-deep)}.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #acddff;background:rgba(255,255,255,.62);padding:9px 13px;border-radius:50px;letter-spacing:1.1px}.pulse-dot{width:8px;height:8px;border-radius:50%;background:#20c99e;box-shadow:0 0 0 5px rgba(32,201,158,.14)}h1{font-size:clamp(38px,4.8vw,66px);letter-spacing:-2.6px;line-height:1.07;margin:20px 0;color:var(--ink)}.lead{max-width:510px;font-size:15px;line-height:1.9;color:var(--muted);margin-bottom:25px}.hero-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.hero-proof{display:flex;gap:9px;flex-wrap:wrap;margin-top:32px}.mini-chip{background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.8);color:#41708d;border-radius:50px;padding:9px 12px;font-size:11px;font-weight:800}.hero-art{position:relative;width:100%;isolation:isolate}.scene-plate{width:100%;border-radius:36px;overflow:hidden;position:relative;filter:drop-shadow(0 22px 23px rgba(35,130,206,.17))}.scene-plate img{display:block;width:100%;height:auto}.float-pill{position:absolute;z-index:2;display:flex;gap:10px;align-items:center;border:1px solid #fff;background:rgba(255,255,255,.81);box-shadow:0 13px 30px #2576a32a;backdrop-filter:blur(15px);padding:12px 16px;border-radius:16px;font-size:12px;font-weight:800}.float-pill-a{left:-3%;top:16%}.float-pill-a>span:first-child{color:#13ba98;font-size:22px}.float-pill-a b{color:#16a984;font-size:10px}.float-pill-b{right:-2%;bottom:16%}.float-pill-b>span:first-child{font-size:23px}
+.section{padding-block:49px 24px}.section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:25px}.section-head h2{font-size:clamp(26px,3.3vw,37px);letter-spacing:-1px;line-height:1.2;margin:10px 0 0}.section-head>p{max-width:360px;line-height:1.75;color:var(--muted);font-size:13px;margin:0}.services-grid,.features-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.service-card{border-radius:22px;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease}.service-card:hover,.project-card:hover{transform:translateY(-5px);box-shadow:0 22px 40px rgba(27,102,175,.15)}.service-art{height:134px;display:grid;place-items:center;font-size:64px;position:relative;overflow:hidden}.service-art i{position:absolute;width:145%;height:65px;bottom:-36px;left:-18%;border-radius:50%;background:#fff7}.art-home{background:linear-gradient(145deg,#d4efff,#97d5f9)}.art-farm{background:linear-gradient(145deg,#daf6eb,#a4e3c3)}.art-city{background:linear-gradient(145deg,#ddf1ff,#b1dafa)}.art-robot{background:linear-gradient(145deg,#e5e8ff,#bdd3ff)}.card-body{padding:18px 20px 22px;text-align:center}.service-card h3,.feature h3{font-size:17px;margin:0 0 7px}.service-card p,.feature p{font-size:12px;line-height:1.75;color:var(--muted);margin:0}
+.project-toolbar{display:flex;align-items:center;gap:12px;padding:15px;border-radius:20px}.search-wrap{flex:1;min-width:160px;display:flex;gap:10px;align-items:center;border:1px solid rgba(182,214,238,.7);background:rgba(255,255,255,.62);border-radius:12px;padding:0 14px}.search-wrap>span:first-child{font-size:25px;color:#4197d9}.search-wrap input{height:44px;width:100%;border:0;background:none;outline:none;font-size:13px;color:var(--ink)}.search-wrap input::placeholder{color:#8aa7bb}.select-wrap select{width:100%;height:44px;min-width:150px;border-radius:12px;border:1px solid rgba(182,214,238,.7);background:rgba(255,255,255,.75);padding:0 12px;color:var(--ink);font-size:12px;font-weight:700}.results-row{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--muted);font-size:12px;padding:14px 4px}.demo-notice{font-size:11px;color:#778fa5}.projects-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}.project-card{border-radius:22px;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease}.project-art{height:170px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:linear-gradient(125deg,#d4f0ff,#93cfff)}.project-art img{width:100%;height:100%;object-fit:cover}.project-art .project-emoji{font-size:67px;filter:drop-shadow(0 12px 10px rgba(0,72,111,.14));z-index:1}.project-art::before{content:'';position:absolute;inset:auto -20% -75% -20%;height:150%;border-radius:45%;background:rgba(255,255,255,.22)}.project-art.green{background:linear-gradient(135deg,#b9efd8,#70dcb8)}.project-art.sky{background:linear-gradient(135deg,#c1e8ff,#85beff)}.project-art.purple{background:linear-gradient(135deg,#dedbff,#aeb9ff)}.project-art.gold{background:linear-gradient(135deg,#fff1c8,#ffd08c)}.project-card-body{padding:19px 21px 20px}.project-meta{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-bottom:11px}.meta-chip{border-radius:100px;background:rgba(12,133,222,.1);color:#0b77ce;padding:5px 9px;font-size:10px;font-weight:800}.meta-chip.dim{background:rgba(83,119,156,.1);color:#6a85a0}.project-card h3{font-size:19px;line-height:1.35;min-height:26px;margin:0 0 8px}.project-card p{font-size:12px;color:var(--muted);line-height:1.75;min-height:43px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.card-bottom{display:flex;justify-content:space-between;gap:5px;align-items:center;margin-top:20px}.text-btn{border:none;background:none;padding:7px 0;font-size:12px;font-weight:800;color:var(--blue-deep)}.tiny-tags{color:var(--muted);font-size:11px}.empty-state{text-align:center;padding:35px;border-radius:20px}.empty-state>span{font-size:40px}
+.centered{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0}.centered p{margin-top:10px}.features-grid{gap:17px}.feature{border-radius:22px;text-align:center;padding:28px 18px 31px}.feature-icon{display:grid;place-items:center;width:67px;height:67px;font-size:32px;border-radius:20px;background:linear-gradient(140deg,rgba(149,214,253,.48),rgba(255,255,255,.6));margin:0 auto 17px}.cta{padding:45px 46px;border-radius:30px;background:linear-gradient(115deg,rgba(36,139,228,.89),rgba(8,92,183,.92));display:flex;align-items:center;justify-content:space-between;gap:20px;color:white;overflow:hidden}.cta:after{content:'';position:absolute;z-index:0;width:480px;height:480px;right:-170px;top:-260px;border:1px solid #ffffff40;border-radius:50%;box-shadow:0 0 0 65px #ffffff0b,0 0 0 130px #ffffff0b}.cta .overline{color:#c7ebff}.cta h2{font-size:30px;margin:9px 0}.cta p{margin:0;color:#e0f2ff;font-size:13px}.cta .primary-btn{background:#fff;color:#146dd1;flex-shrink:0}.footer{padding:30px 0 40px;display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid #b9d9ef;color:var(--muted);font-size:12px;margin-top:40px}.footer-brand{display:flex;align-items:center;gap:20px}.footer-brand strong{font-size:20px;color:var(--ink)}
+.verify-banner{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:50;max-width:780px;width:calc(100% - 32px);border-radius:20px;padding:17px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}.verify-banner>div:first-child{display:flex;flex-direction:column;gap:3px}.verify-banner strong{font-size:14px}.verify-banner span{font-size:12px;color:var(--muted)}.verify-actions{display:flex;gap:8px}.toast{position:fixed;top:98px;right:20px;z-index:90;max-width:400px;color:white;background:#163c60;border-radius:13px;padding:15px 18px;box-shadow:0 10px 30px #09274355;font-size:13px;line-height:1.5}.modal{border-radius:25px;padding:0;color:var(--ink);max-width:min(95vw,510px);width:100%;max-height:88vh;overflow-y:auto;margin:auto;background:rgba(237,248,255,.95);border:1px solid white}.modal::backdrop{background:rgba(5,36,69,.48);backdrop-filter:blur(9px)}.modal-inner{padding:26px}.modal-head{display:flex;justify-content:space-between;align-items:start;gap:12px;margin-bottom:19px}.modal h2{font-size:25px;letter-spacing:-.5px;margin:6px 0 0}.tabs{padding:5px;display:grid;grid-template-columns:1fr 1fr;gap:6px;background:#d8ebfa;border-radius:13px;margin-bottom:20px}.tab{border:0;border-radius:10px;padding:12px;font-weight:800;color:#456a8c;background:transparent}.tab.active{background:white;box-shadow:0 2px 10px #3d90d41f;color:#096cc8}.field{display:flex;flex-direction:column;gap:8px;margin-bottom:15px;font-size:12px;font-weight:800}.field input:not([type=file]),.field textarea,.field select{width:100%;background:rgba(255,255,255,.8);border:1px solid #c9dfee;border-radius:11px;padding:12px;color:var(--ink);outline:0;font-size:13px;font-weight:500}.field input[type=file]{width:100%;min-width:0;background:rgba(255,255,255,.66);border:1px solid #c9dfee;border-radius:11px;padding:11px;font-size:11px}.field textarea{resize:vertical}.fine-print{color:var(--muted);font-size:12px;line-height:1.7}.full{width:100%}.modal form>.text-btn{display:block;margin:15px auto 0}.project-modal{max-width:580px}.project-modal .detail-art{height:180px;display:grid;place-items:center;font-size:80px;background:linear-gradient(125deg,#b5eaff,#93cafd);border-radius:17px;overflow:hidden;margin-bottom:18px}.detail-art img{width:100%;height:100%;object-fit:cover}.detail-desc{line-height:1.8;color:var(--muted);font-size:14px}.tags{display:flex;flex-wrap:wrap;gap:7px}.tags span{font-size:11px;border-radius:90px;padding:7px 10px;background:#deecf9;color:#356897}.detail-actions{display:flex;align-items:center;gap:12px;margin-top:24px}.admin-modal{max-width:770px}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.admin-form{padding:16px;border:1px solid #d1e6f5;border-radius:18px;background:#ffffff45}.admin-list-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:28px}.admin-list-head h3{font-size:19px}.admin-list{display:flex;flex-direction:column;gap:10px}.admin-item{border:1px solid #c9dfef;background:#ffffff9a;border-radius:12px;padding:14px;display:flex;justify-content:space-between;gap:10px;align-items:center}.admin-item strong{font-size:13px}.admin-item p{font-size:11px;margin:5px 0 0;color:var(--muted)}.danger-btn{border:1px solid #f6c5ce;color:#b52a42;background:#fff1f3;border-radius:10px;padding:9px 11px;font-size:11px;font-weight:800}.admin-item .danger-btn{flex-shrink:0}
+body.dark{color-scheme:dark;--ink:#eaf6ff;--muted:#b3cbe2;--line:rgba(255,255,255,.15);--glass:rgba(15,38,68,.55);--glass-strong:rgba(18,48,83,.84);--shadow:0 16px 35px rgba(0,12,33,.36),inset 0 1px 0 rgba(255,255,255,.12);--bg:#08182c;background:linear-gradient(135deg,#071a30,#122a48 45%,#0b253c)}body.dark .glass-shell::before{background:linear-gradient(145deg,rgba(255,255,255,.08),transparent 70%)}body.dark .chip,body.dark .icon-btn,body.dark .soft-btn,body.dark .eyebrow,body.dark .mini-chip{background:rgba(19,48,80,.78);color:#e7f5ff;border-color:#ffffff29}body.dark .search-wrap,body.dark .select-wrap select,body.dark .field input:not([type=file]),body.dark .field textarea,body.dark .field select,body.dark .field input[type=file]{background:rgba(15,40,68,.87);border-color:#57728e99;color:#eaf6ff}body.dark .search-wrap input{color:#eaf6ff}body.dark .search-wrap input::placeholder{color:#91aac4}body.dark .modal{background:rgba(12,33,56,.98)}body.dark .tabs,body.dark .tags span{background:#183d63;color:#c4e8ff}body.dark .tab{color:#b5d0e9}body.dark .tab.active{background:#245b89;color:white}body.dark .admin-form,body.dark .admin-item{background:#153651a3;border-color:#456886}body.dark .meta-chip{color:#9dd3ff;background:#123e68}body.dark .meta-chip.dim{color:#d2d9e8;background:#2b415a}body.dark .service-card p,body.dark .feature p{color:#c3d6e9}body.dark .project-card .tiny-tags{color:#b7cde0}body.dark .float-pill{background:#183d62;color:#eaf6ff;border-color:#6da8d7}body.dark .footer{border-top-color:#ffffff2b}
+@media(max-width:1100px){.nav{gap:15px}.nav a{font-size:11px}.hero{grid-template-columns:1fr 1fr}.hero h1{font-size:clamp(36px,5vw,54px)}.services-grid,.features-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.site-header{width:calc(100% - 22px);padding:10px 12px;top:8px;gap:6px}.brand strong{font-size:19px}.brand small{font-size:9px}.brand-mark{width:38px;height:38px}.nav{display:none;position:absolute;top:calc(100% + 8px);left:0;width:100%;flex-direction:column;align-items:stretch;gap:0;border-radius:18px;border:1px solid var(--line);background:var(--glass-strong);backdrop-filter:blur(30px);padding:8px;box-shadow:var(--shadow)}.nav.open{display:flex}.nav a{font-size:14px;padding:13px}.menu-btn{display:grid}.chip{padding:10px}.header-actions{gap:5px}.header-actions>.primary-btn{font-size:11px;padding:12px}.container{width:calc(100% - 30px)}.hero{grid-template-columns:1fr;padding:39px 0 25px;gap:26px;min-height:0}.hero-copy{padding:0 8px}.hero-art{max-width:630px;margin:auto}.hero h1{font-size:clamp(38px,7vw,58px)}.section{padding-block:35px 16px}.section-head{align-items:start;flex-direction:column;gap:9px}.section-head>p{max-width:100%}.project-toolbar{flex-wrap:wrap}.search-wrap{flex-basis:100%}.select-wrap{flex:1}.projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cta{padding:30px;flex-direction:column;align-items:start}.footer{flex-wrap:wrap}.verify-banner{flex-direction:column;align-items:stretch}.verify-actions>*{flex:1}.float-pill-a{left:0}.float-pill-b{right:0}}
+@media(max-width:520px){.brand small{max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.header-actions>.primary-btn{padding:9px 10px}.icon-btn{width:35px;height:35px}.chip{font-size:11px;padding:10px}.hero h1{letter-spacing:-1.4px}.services-grid,.features-grid,.projects-grid{grid-template-columns:1fr}.service-art{height:155px}.float-pill{font-size:10px;padding:7px 10px}.hero-proof{margin-top:20px}.field-grid{grid-template-columns:1fr;gap:0}.modal-inner{padding:20px}.section-head h2{font-size:29px}.project-toolbar .select-wrap select{min-width:0}.cta h2{font-size:24px}.results-row{align-items:start;flex-direction:column}.footer-brand{flex-direction:column;align-items:start;gap:2px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Premium V2: animated liquid-glass components */
+.stats-section{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;padding:3px 0 22px}
+.stat-box{border-radius:20px;padding:22px 25px;display:flex;align-items:center;gap:16px;justify-content:center}
+.stat-box strong{font-size:clamp(28px,4vw,43px);line-height:1;letter-spacing:-1.5px;color:var(--blue-deep)}
+.stat-box span{font-size:12px;font-weight:800;color:var(--muted);max-width:115px}
+.filter-buttons{display:flex;flex-wrap:wrap;gap:9px;padding:15px 2px 2px}
+.filter-pill{border:1px solid rgba(115,185,235,.42);border-radius:999px;color:var(--ink);background:rgba(255,255,255,.52);backdrop-filter:blur(12px);padding:10px 16px;font-size:12px;font-weight:800}
+.filter-pill[aria-pressed="true"]{background:linear-gradient(130deg,#1179e4,#24a6f5);color:white;border-color:transparent;box-shadow:0 8px 16px #168bd439}
+.card-bottom{align-items:center}.card-bottom .download-small{border:1px solid #8ac5ed;background:rgba(10,139,231,.1);color:var(--blue-deep);border-radius:9px;font-size:11px;font-weight:800;padding:9px 10px;white-space:nowrap}
+.card-bottom .download-small:hover{background:rgba(10,139,231,.2)}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+.gallery-tile{position:relative;border:1px solid rgba(255,255,255,.8);border-radius:22px;overflow:hidden;min-height:210px;padding:0;isolation:isolate;cursor:pointer;text-align:left;box-shadow:var(--shadow);background:linear-gradient(130deg,#a4deff,#e0f6ff)}
+.gallery-tile img{display:block;width:100%;height:240px;object-fit:cover;transition:transform .4s ease}
+.gallery-tile:hover img{transform:scale(1.065)}
+.gallery-caption{position:absolute;bottom:0;left:0;right:0;color:white;display:flex;flex-direction:column;gap:4px;padding:46px 18px 18px;background:linear-gradient(transparent,rgba(6,30,59,.89))}
+.gallery-caption strong{font-size:17px}.gallery-caption small{font-weight:700;opacity:.85}
+.contact-layout{display:grid;grid-template-columns:.88fr 1.12fr;gap:30px;align-items:center;margin-top:32px}
+.contact-copy{padding:20px 10px}.contact-copy h2{font-size:clamp(27px,3.8vw,42px);line-height:1.17;letter-spacing:-1px;margin:13px 0}
+.contact-copy p{font-size:14px;line-height:1.8;color:var(--muted)}.contact-tag{display:inline-block;margin:6px 8px 0 0;padding:10px 13px;font-size:12px;font-weight:800;border-radius:100px;background:rgba(255,255,255,.62);border:1px solid var(--line)}
+.contact-panel{border-radius:24px;padding:30px}.contact-panel .field input:not([type=file]),.contact-panel .field textarea{background:rgba(255,255,255,.69)}
+.auth-separator{text-align:center;margin:14px 0;color:var(--muted);font-size:12px;font-weight:700}
+.google-btn{width:100%;display:flex;justify-content:center;align-items:center;gap:13px;background:rgba(255,255,255,.9);border:1px solid #bddef2;border-radius:13px;color:#153955;padding:13px 15px;font-weight:800;font-size:13px}
+.google-g{font-weight:900;font-size:23px;line-height:1;font-family:Arial,sans-serif;color:#4285F4}
+.inbox-item{align-items:start}.inbox-body{min-width:0;overflow-wrap:anywhere}.inbox-body p{white-space:pre-wrap;line-height:1.7;font-size:12px}.inbox-body small{color:var(--muted)}
+body.dark .filter-pill{background:rgba(24,56,89,.86);border-color:#5986b164;color:#d4ecff}body.dark .filter-pill[aria-pressed="true"]{background:linear-gradient(130deg,#0c68c7,#1895df);border-color:transparent;color:white}
+body.dark .contact-tag{background:rgba(17,53,82,.7)}body.dark .contact-panel .field input:not([type=file]),body.dark .contact-panel .field textarea{background:#173c5f;color:white;border-color:#547ea5}
+@media(max-width:760px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-layout{grid-template-columns:1fr;gap:12px}.stats-section{gap:9px}.stat-box{flex-direction:column;text-align:center;padding:15px 7px;gap:8px}.stat-box span{font-size:10px}.gallery-tile img{height:210px}}
+@media(max-width:520px){.gallery-grid{grid-template-columns:1fr}.gallery-tile img{height:220px}.filter-buttons{gap:7px}.filter-pill{padding:9px 12px;font-size:11px}.contact-panel{padding:19px}.card-bottom{gap:10px}.tiny-tags{display:none}}
+@media(prefers-reduced-motion:no-preference){.motion-ready .reveal{opacity:0;transform:translateY(24px);transition:opacity .65s cubic-bezier(.2,.9,.25,1),transform .65s cubic-bezier(.2,.9,.25,1)}.motion-ready .reveal.is-visible{opacity:1;transform:translateY(0)} }
+
+/* Google sign-in diagnostics: visible feedback even if Firebase fails to load. */
+.firebase-status{position:relative;z-index:29;width:calc(100% - 48px);max-width:1220px;margin:12px auto 0;padding:12px 16px;background:#fff2df;border:1px solid #f3c273;border-radius:14px;color:#743d00;font-size:13px;line-height:1.6;box-shadow:0 7px 23px #7c4c1c17;overflow-wrap:anywhere;}
+.auth-feedback{padding:10px 13px;background:#fff2df;border:1px solid #edc58a;border-radius:12px;color:#6d3905;font-size:12px;line-height:1.65;overflow-wrap:anywhere;}
+body.dark .firebase-status, body.dark .auth-feedback {background:#493c27;color:#ffead0;border-color:#866633;}
+#retryFirebaseBtn{display:block;text-align:left;color:var(--blue);padding:6px 0;}
+@media(max-width:650px){.firebase-status{width:calc(100% - 24px)}}
+
+/* CircuitX · Liquid Glass design system
+   Visual-only override. Existing Firebase/auth/project behavior stays in src/app.js.
+   Inspired by the translucency and depth of modern mobile glass interfaces. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+:root{
+  --ink:#16304f; --muted:#647b9b; --blue:#376cf6; --blue-deep:#315cdd;
+  --line:rgba(255,255,255,.79); --glass:rgba(255,255,255,.25);
+  --glass-strong:rgba(246,250,255,.75);
+  --shadow:0 22px 65px rgba(55,99,179,.10),0 2px 9px rgba(61,105,158,.055),inset 0 1px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(255,255,255,.18);
+  --liquid-border:rgba(255,255,255,.86); --liquid-tint:rgba(235,245,255,.40);
+  --button-glow:0 10px 22px rgba(39,108,240,.26);
+}
+html{scroll-padding-top:118px}
+body{
+  font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  color:var(--ink);background:#e9f4ff;
+  background-image:radial-gradient(ellipse 55% 36% at 81% 4%,rgba(202,182,253,.75),transparent 87%),
+    radial-gradient(ellipse 60% 48% at 0% 18%,rgba(117,215,255,.52),transparent 90%),
+    radial-gradient(ellipse 52% 30% at 91% 52%,rgba(157,222,251,.6),transparent 85%),
+    radial-gradient(ellipse 63% 35% at 18% 81%,rgba(181,188,255,.43),transparent 86%),
+    linear-gradient(150deg,#f3faff 0%,#eaf5ff 39%,#e7f3ff 70%,#f2faff 100%);
+  background-attachment:fixed;
+}
+body::before{content:'';position:fixed;inset:0;z-index:-4;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.8) .85px,transparent .85px);
+  background-size:24px 24px;opacity:.18}
+h1,h2,h3,strong{font-family:'Plus Jakarta Sans','DM Sans',sans-serif}
+.container{max-width:1260px}
+.ambient{filter:blur(57px);opacity:.60;mix-blend-mode:multiply;z-index:-3}
+.ambient-a{width:530px;height:530px;top:10%;left:-230px;background:#9fd9ff}
+.ambient-b{width:540px;height:540px;top:25%;right:-230px;background:#ccc1ff}
+.ambient-c{width:480px;height:460px;top:1030px;left:15%;background:#9ee6f2}
+.liquid-aurora{position:absolute;pointer-events:none;width:min(80vw,1040px);height:610px;top:145px;right:-280px;border-radius:50%;z-index:-2;
+ background:conic-gradient(from 230deg,rgba(106,203,255,.30),rgba(150,159,255,.38),rgba(245,191,245,.3),rgba(152,235,238,.31),rgba(106,203,255,.30));filter:blur(56px);animation:aurora-move 20s ease-in-out infinite alternate}
+@keyframes aurora-move{to{transform:translate(-110px,50px) rotate(19deg) scale(1.07)}}
+/* Material: frosted + edge highlight + reflective sweep */
+.glass-shell{
+  background:linear-gradient(153deg,rgba(255,255,255,.49) 0%,rgba(255,255,255,.22) 43%,rgba(225,242,255,.18) 100%);
+  border:1px solid var(--liquid-border);
+  box-shadow:var(--shadow);
+  -webkit-backdrop-filter:blur(34px) saturate(185%);backdrop-filter:blur(34px) saturate(185%);
+}
+.glass-shell::before{inset:1px;background:linear-gradient(131deg,rgba(255,255,255,.59) 0%,rgba(255,255,255,.08) 33%,transparent 57%,rgba(255,255,255,.20) 100%);border-radius:inherit}
+.glass-shell::after{content:'';pointer-events:none;position:absolute;inset:0;border-radius:inherit;z-index:0;box-shadow:inset 1px 1px 0 rgba(255,255,255,.40),inset -1px -1px 0 rgba(154,195,244,.11)}
+.glass-shell>*{z-index:1}
+/* Glass floating navigation */
+.site-header{max-width:1340px;width:calc(100% - 64px);top:14px;margin:19px auto 0;padding:12px 17px 12px 14px;border-radius:27px;min-height:77px;gap:18px;background:rgba(255,255,255,.41);box-shadow:0 17px 42px rgba(34,82,145,.11),inset 0 1px 0 #fff}
+.brand{gap:12px}
+.brand-mark{width:48px;height:48px;border-radius:17px;background:linear-gradient(140deg,#77c6ff 0%,#356ff5 54%,#7167e8 100%);border:1px solid rgba(255,255,255,.75);box-shadow:inset 0 2px 2px #ffffff80,0 8px 18px #396af742}
+.brand strong{font-size:23px;letter-spacing:-1.4px}
+.brand small{font-size:10px;letter-spacing:.28px;font-weight:600}
+.accent{color:#4675f6}
+.nav{gap:19px}
+.nav a{font-size:12px;font-weight:700;letter-spacing:-.12px;padding:11px 1px;transition:color .22s ease}
+.nav a:hover{color:#375cff}
+.header-actions{gap:7px}
+.chip,.icon-btn,.soft-btn,.mini-chip,.filter-pill,.text-btn,.google-btn{backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%)}
+.chip,.icon-btn,.soft-btn{border:1px solid rgba(255,255,255,.88);background:linear-gradient(135deg,rgba(255,255,255,.66),rgba(255,255,255,.25));color:var(--ink);border-radius:15px;box-shadow:inset 0 1px 0 #fff8,0 5px 13px rgba(42,93,171,.065)}
+.chip{font-weight:800;min-width:60px;padding:11px 12px}
+.icon-btn{width:43px;height:43px;font-size:21px}
+.primary-btn{background:linear-gradient(132deg,#438eff 0%,#2767ea 52%,#5955de 100%);border-radius:15px;padding:15px 23px;box-shadow:var(--button-glow),inset 0 1px 0 rgba(255,255,255,.48);font-weight:800;letter-spacing:.03px}
+.primary-btn:hover{transform:translateY(-3px);box-shadow:0 15px 28px rgba(54,92,234,.33),inset 0 1px 0 #ffffff91}
+.primary-btn.small,.soft-btn.small{border-radius:13px}
+/* Hero: open editorial layout + luminous floating device */
+.hero{grid-template-columns:1.02fr .98fr;gap:33px;padding-block:82px 52px;min-height:620px}
+.hero::before{background:radial-gradient(ellipse at 65% 50%,rgba(113,162,255,.17),transparent 65%);width:100%;left:0}
+.hero-copy{padding:0 0 0 10px}
+.hero-visual-topline{display:flex;align-items:center;gap:7px;color:#778da7;letter-spacing:2.8px;font-size:10px;font-weight:800;margin-bottom:24px}
+.eyebrow{border:1px solid rgba(255,255,255,.85);background:linear-gradient(135deg,rgba(255,255,255,.72),rgba(255,255,255,.26));box-shadow:0 5px 20px rgba(59,130,210,.07),inset 0 1px 0 #fff;border-radius:100px;color:#4573e3;font-size:10px;padding:12px 16px;letter-spacing:1.1px}
+.pulse-dot{box-shadow:0 0 0 4px rgba(22,192,150,.17),0 0 12px rgba(20,189,154,.35)}
+.hero h1{font-size:clamp(45px,4.9vw,76px);line-height:1.10;letter-spacing:-3.6px;font-weight:800;margin:23px 0 22px}
+.hero h1 em{font-style:normal;background:linear-gradient(102deg,#3474f0 5%,#516bf9 40%,#986ee8 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:560px;font-size:15px;line-height:1.92;margin-bottom:29px;color:#59748f}
+.hero-actions{gap:12px}
+.hero-actions .soft-btn{background:rgba(255,255,255,.49)}
+.hero-proof{margin-top:41px;gap:9px}
+.mini-chip{padding:10px 13px;font-weight:700;letter-spacing:.05px;color:#56708f;background:linear-gradient(120deg,rgba(255,255,255,.63),rgba(255,255,255,.22));border:1px solid #ffffffcf;box-shadow:inset 0 1px #fff8}
+.hero-art{filter:drop-shadow(0 30px 45px rgba(43,101,186,.10));transform:perspective(1400px) rotateY(-3deg)}
+.hero-art::before{position:absolute;content:'';inset:4% 3%;z-index:-1;border-radius:58px;transform:rotate(-7deg) scale(1.02);background:linear-gradient(145deg,rgba(255,255,255,.75),rgba(140,207,255,.22));border:1px solid rgba(255,255,255,.9);box-shadow:0 26px 44px #4976c621;backdrop-filter:blur(24px)}
+.scene-plate{position:relative;border-radius:36px;padding:16px;background:linear-gradient(150deg,rgba(255,255,255,.74),rgba(255,255,255,.27) 52%,rgba(191,218,255,.30));border:1px solid rgba(255,255,255,.88);box-shadow:0 27px 50px rgba(61,121,201,.15),inset 0 1px 0 #ffffffeb;filter:none}
+.scene-plate img{border-radius:24px;position:relative;z-index:1}
+.scene-glint{position:absolute;z-index:2;pointer-events:none;left:20px;right:20px;top:20px;height:47%;border-radius:28px;background:linear-gradient(155deg,rgba(255,255,255,.16),transparent 65%)}
+.float-pill{border-radius:20px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);box-shadow:0 16px 36px rgba(59,103,157,.17),inset 0 1px 0 #fff;backdrop-filter:blur(23px) saturate(170%);-webkit-backdrop-filter:blur(23px) saturate(170%);font-size:11px;padding:12px 16px}
+.float-pill-a{top:9%;left:-7%;animation:float-a 6s ease-in-out infinite}
+.float-pill-b{bottom:10%;right:-5%;animation:float-a 7s ease-in-out -2s infinite}
+.float-pill-c{left:0;bottom:0;transform:translateY(37%);gap:10px;font-size:10px;line-height:1.6;letter-spacing:1px;color:#426987}
+.float-pill-c b{font-size:9px;color:#8397aa;letter-spacing:1.1px}
+.signal-circle{width:37px;height:37px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,#60d1f4,#5a7efa);font-size:21px;color:#fff}
+@keyframes float-a{50%{transform:translateY(-12px)}}
+/* Statistics */
+.stats-section{gap:17px;padding-top:16px;padding-bottom:32px}
+.stat-box{border-radius:28px;padding:30px 25px;min-height:126px;gap:17px;box-shadow:var(--shadow)}
+.stat-box strong{font-size:clamp(33px,4vw,48px);color:#3d6be9}
+.stat-box span{color:#68819c;font-size:12px;font-weight:700}
+/* Section typography + glass cards */
+.section{padding-block:64px 31px}
+.overline{color:#4e7fe5;font-size:10px;letter-spacing:2.6px}
+.section-head{margin-bottom:27px}
+.section-head h2{font-size:clamp(28px,3.4vw,41px);letter-spacing:-1.5px;font-weight:800}
+.section-head>p{font-size:13px;line-height:1.9}
+.services-grid,.features-grid{gap:19px}
+.service-card,.feature,.project-card,.contact-panel{border-radius:29px;overflow:hidden}
+.service-card,.project-card,.feature{box-shadow:0 17px 48px #3573c114,inset 0 1px 0 #fff;
+ transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .35s ease}
+.service-card:hover,.project-card:hover,.feature:hover{transform:translateY(-8px);box-shadow:0 22px 48px rgba(58,108,181,.20),inset 0 1px 0 #fff;border-color:#fffffffa}
+.service-art{height:152px;font-size:62px;isolation:isolate}
+.service-art::before{content:'';position:absolute;width:150px;height:150px;top:-64px;right:-45px;border-radius:50%;border:1px solid #fff9;box-shadow:0 0 0 27px #ffffff21,0 0 0 55px #ffffff21}
+.service-art i{background:rgba(255,255,255,.31)}
+.art-home{background:linear-gradient(145deg,#c8e8ff,#bdd5ff,#f8f1ff)}
+.art-farm{background:linear-gradient(145deg,#c2f0e3,#c5e4fb,#edf5fc)}
+.art-city{background:linear-gradient(145deg,#c5d5ff,#a9e9fb,#e8f1ff)}
+.art-robot{background:linear-gradient(145deg,#e4d9ff,#b8d9ff,#f3efff)}
+.card-body{padding:24px 21px 27px}
+.service-card h3,.feature h3{font-size:17px;letter-spacing:-.45px}
+.service-card p,.feature p{line-height:1.8}
+/* Search + controls */
+.project-toolbar{border-radius:25px;padding:14px;gap:12px}
+.search-wrap,.select-wrap select{background:rgba(255,255,255,.53);border:1px solid #ffffffcf;border-radius:17px;box-shadow:inset 0 1px 0 #fff6}
+.search-wrap input{height:48px}
+.search-wrap:focus-within{border-color:#74aefa;box-shadow:0 0 0 3px #5e99f42b}
+.select-wrap select{height:50px;font-weight:700}
+.filter-buttons{gap:10px;padding:19px 2px 4px}
+.filter-pill{background:rgba(255,255,255,.43);border:1px solid rgba(255,255,255,.88);box-shadow:0 6px 14px #4975af12,inset 0 1px 0 #fffb;border-radius:50px;padding:11px 18px}
+.filter-pill:hover{background:rgba(255,255,255,.7)}
+.filter-pill[aria-pressed="true"]{background:linear-gradient(118deg,#478eff,#4b61ef);box-shadow:0 8px 21px rgba(69,104,238,.25),inset 0 1px #fff8}
+.results-row{padding:17px 4px}
+.projects-grid{gap:22px}
+.project-card{border-radius:29px}
+.project-art{height:198px}
+.project-art::after{content:'';pointer-events:none;position:absolute;inset:0;background:linear-gradient(145deg,rgba(255,255,255,.30),transparent 40%)}
+.project-card-body{padding:23px}
+.project-card h3{font-size:19px}
+.meta-chip{background:rgba(103,148,240,.14);color:#4776d2;border:1px solid #ffffff8c;padding:7px 10px}
+.card-bottom .download-small{border-radius:12px;padding:10px 12px;background:rgba(241,247,255,.58);border-color:rgba(104,157,234,.38)}
+/* Gallery */
+.gallery-grid{gap:21px}
+.gallery-tile{border-radius:28px;background:rgba(255,255,255,.36);border:7px solid rgba(255,255,255,.38);box-shadow:var(--shadow)}
+.gallery-tile img{height:240px;border-radius:22px}
+.gallery-caption{border-radius:0 0 20px 20px;padding:59px 18px 20px;background:linear-gradient(transparent,rgba(18,39,94,.85))}
+/* Why choose + call to action */
+.feature{padding:32px 18px 37px;border-radius:29px}
+.feature-icon{width:76px;height:76px;border-radius:25px;background:linear-gradient(144deg,rgba(235,248,255,.9),rgba(155,204,254,.4));border:1px solid #ffffffb6;box-shadow:inset 0 1px 0 #fff,0 7px 17px #4373c21f}
+.cta{border-radius:35px;background:linear-gradient(110deg,rgba(61,120,239,.77),rgba(94,127,230,.62),rgba(87,162,224,.79));box-shadow:0 24px 56px #3a70c533,inset 0 1px 0 #ffffffaa;border:1px solid rgba(255,255,255,.7);padding:53px;backdrop-filter:blur(25px);-webkit-backdrop-filter:blur(25px)}
+.cta:after{box-shadow:0 0 0 58px #ffffff18,0 0 0 116px #ffffff10}
+.cta .primary-btn{color:#3967d5;background:linear-gradient(140deg,#fff,#eaf6ff);box-shadow:0 11px 28px #163c8440}
+.cta h2{font-size:34px;letter-spacing:-1.15px}
+.contact-copy h2{letter-spacing:-1.4px}
+.contact-tag{border-radius:100px;background:rgba(255,255,255,.45);border:1px solid #ffffffcb;box-shadow:inset 0 1px 0 #fff6}
+.contact-panel{padding:33px}
+.field input:not([type=file]),.field textarea,.field select,.field input[type=file]{border-radius:14px!important;background:rgba(255,255,255,.55)!important;border:1px solid rgba(255,255,255,.9)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:#75b0ff!important;box-shadow:0 0 0 3px #4485ed24!important}
+.footer{border-top:1px solid rgba(255,255,255,.75);padding-top:39px;margin-top:60px}
+/* Auth/login and other dialogs get the same frosted treatment */
+.modal{max-height:min(90vh,900px);border-radius:31px;background:linear-gradient(145deg,rgba(250,253,255,.90),rgba(237,246,255,.76));border:1px solid rgba(255,255,255,.95);box-shadow:0 26px 75px #1f497052,inset 0 1px 0 #fff;backdrop-filter:blur(40px) saturate(165%);-webkit-backdrop-filter:blur(40px) saturate(165%)}
+.modal::backdrop{background:rgba(18,44,85,.40);backdrop-filter:blur(15px) saturate(130%)}
+.modal-inner{padding:30px}
+.tabs{border-radius:17px;background:rgba(108,167,224,.13);border:1px solid rgba(255,255,255,.77);padding:5px}
+.tab{border-radius:12px}.tab.active{background:rgba(255,255,255,.82);color:#3569cf;box-shadow:0 4px 13px rgba(49,103,178,.16)}
+.google-btn{border-radius:16px;border-color:#ffffffeb;background:rgba(255,255,255,.72);box-shadow:inset 0 1px #fff,0 7px 19px #547fa326}
+.google-btn:hover{background:rgba(255,255,255,.93)}
+.admin-form,.admin-item{border-radius:21px;background:rgba(255,255,255,.27);border:1px solid #ffffffbd}
+.verify-banner{border-radius:25px;box-shadow:0 22px 60px #284f8533}
+.toast{background:rgba(28,45,87,.88);border:1px solid #ffffff5b;border-radius:17px;backdrop-filter:blur(25px)}
+.firebase-status,.auth-feedback{border-radius:15px}
+/* Dark mode with visible glass and accessible contrast */
+body.dark{--ink:#edf5ff;--muted:#bbcee7;--blue:#91b2ff;--blue-deep:#a7c3ff;
+ --line:rgba(206,233,255,.19);--glass:rgba(21,36,73,.43);--glass-strong:rgba(25,45,84,.91);
+ --liquid-border:rgba(219,234,255,.23);--shadow:0 22px 67px rgba(1,7,27,.39),inset 0 1px rgba(255,255,255,.13);
+ color-scheme:dark;color:var(--ink);
+ background:radial-gradient(ellipse 51% 35% at 76% 7%,rgba(96,73,184,.32),transparent 90%),
+ radial-gradient(ellipse 50% 37% at 0% 21%,rgba(35,113,187,.32),transparent 90%),
+ radial-gradient(ellipse 65% 35% at 93% 62%,rgba(26,96,147,.24),transparent 88%),
+ linear-gradient(150deg,#07152b,#0a1d38 48%,#0e2444 100%);
+ background-attachment:fixed}
+body.dark .ambient{opacity:.25;mix-blend-mode:screen}
+body.dark .liquid-aurora{opacity:.42}
+body.dark .glass-shell{background:linear-gradient(145deg,rgba(46,77,134,.43),rgba(20,47,94,.37) 60%,rgba(40,55,97,.46));border-color:var(--liquid-border);box-shadow:var(--shadow)}
+body.dark .glass-shell::before{background:linear-gradient(132deg,rgba(225,243,255,.10),rgba(185,219,255,.02) 47%,rgba(169,198,255,.06))}
+body.dark .site-header{background:rgba(20,38,77,.68)}
+body.dark .brand small,body.dark .nav a{color:#c0d2e9}
+body.dark .hero-visual-topline{color:#9eb6d8}
+body.dark .hero h1 em{background:linear-gradient(100deg,#89c8ff,#9aa8ff 55%,#c3a2ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+body.dark .lead{color:#c5d5e9}
+body.dark .chip,body.dark .icon-btn,body.dark .soft-btn,body.dark .mini-chip,body.dark .filter-pill,body.dark .eyebrow{background:linear-gradient(135deg,rgba(53,83,138,.57),rgba(32,53,96,.58));color:#eaf5ff;border-color:rgba(226,241,255,.25)}
+body.dark .scene-plate,body.dark .hero-art::before{background:linear-gradient(145deg,rgba(72,105,173,.36),rgba(36,67,123,.35));border-color:rgba(221,236,255,.25)}
+body.dark .float-pill{background:rgba(27,49,90,.82);border-color:rgba(209,234,255,.24);color:#e8f6ff}
+body.dark .float-pill-c b{color:#c1d0e4}
+body.dark .stat-box strong{color:#a9baff}
+body.dark .stat-box span{color:#bdd0e8}
+body.dark .search-wrap,body.dark .select-wrap select{background:rgba(22,42,78,.68);border-color:rgba(224,241,255,.2)}
+body.dark .meta-chip{color:#bdd1ff;border-color:#ffffff2a;background:rgba(91,135,224,.24)}
+body.dark .gallery-tile{border-color:rgba(255,255,255,.12)}
+body.dark .feature-icon{background:linear-gradient(144deg,rgba(98,140,206,.32),rgba(63,88,171,.21));border-color:#ffffff34}
+body.dark .contact-tag{background:rgba(21,51,96,.55);border-color:#ffffff2f}
+body.dark .cta{background:linear-gradient(110deg,rgba(34,81,167,.78),rgba(66,65,152,.67),rgba(26,100,153,.74))}
+body.dark .modal{background:linear-gradient(140deg,rgba(27,47,88,.98),rgba(20,40,73,.95));border-color:#ffffff38;color:#edf5ff}
+body.dark .tabs{background:rgba(0,8,30,.25);border-color:#ffffff24}
+body.dark .tab.active{background:rgba(95,126,195,.35);color:white}
+body.dark .google-btn{background:rgba(236,247,255,.9);border-color:#ffffffba;color:#142d50}
+body.dark .field input:not([type=file]),body.dark .field textarea,body.dark .field select,body.dark .field input[type=file]{background:rgba(21,45,84,.75)!important;border-color:rgba(255,255,255,.22)!important;color:#f3f8ff!important}
+body.dark .admin-form,body.dark .admin-item{background:rgba(23,52,98,.66);border-color:#ffffff27}
+/* Phones and tablets */
+@media(max-width:1140px){.nav{gap:13px}.site-header{gap:9px}.hero h1{font-size:clamp(43px,5.4vw,66px)}.hero{gap:20px}}
+@media(max-width:930px){.nav{gap:10px}.nav a{font-size:11px}.site-header{width:calc(100% - 30px)}.header-actions{gap:5px}.brand small{max-width:122px}.hero{padding-top:60px}.hero-art{transform:none}.float-pill-c{display:none}}
+@media(max-width:760px){.site-header{top:9px;padding:10px 12px;min-height:64px;border-radius:23px;width:calc(100% - 24px)}.brand-mark{width:40px;height:40px;border-radius:14px}.brand strong{font-size:19px}.brand small{font-size:9px}.nav{background:rgba(236,247,255,.95);border:1px solid rgba(255,255,255,.9);border-radius:24px;box-shadow:0 20px 45px #23509b32;backdrop-filter:blur(30px)}body.dark .nav{background:rgba(18,40,80,.95)}.nav a{font-size:14px}.hero{padding:58px 0 28px;min-height:auto;gap:41px}.hero-copy{padding:0 7px}.hero h1{font-size:clamp(42px,8vw,68px);letter-spacing:-2.6px}.hero-visual-topline{margin-bottom:18px}.hero-art{max-width:600px}.stat-box{border-radius:22px;min-height:110px}.section{padding-block:49px 17px}.services-grid,.features-grid{gap:14px}.contact-panel{padding:25px}}
+@media(max-width:520px){.container{width:calc(100% - 30px)}.header-actions>.primary-btn{padding:10px 11px}.brand{gap:7px}.brand-mark{width:38px;height:38px}.brand strong{font-size:18px}.brand small{font-size:8px;max-width:95px}.chip{padding:9px;min-width:48px}.icon-btn{width:36px;height:36px}.hero{padding-top:44px;gap:30px}.hero h1{font-size:clamp(39px,10.2vw,52px);line-height:1.11;letter-spacing:-2px}.hero-proof{gap:7px;margin-top:28px}.mini-chip{font-size:10px;padding:8px 10px}.hero-visual-topline{font-size:9px;letter-spacing:1.6px}.scene-plate{padding:8px;border-radius:25px}.scene-plate img{border-radius:19px}.float-pill{padding:8px 10px;border-radius:13px}.float-pill-a{left:0}.float-pill-b{right:0}.stats-section{gap:9px}.stat-box{padding:19px 5px;gap:9px;border-radius:20px;min-height:97px}.stat-box strong{font-size:30px}.stat-box span{font-size:10px}.section-head h2{font-size:30px}.service-card,.feature,.project-card{border-radius:23px}.project-toolbar{border-radius:21px}.cta{padding:31px 24px;border-radius:27px}.cta h2{font-size:27px}.modal{max-width:calc(100vw - 22px);border-radius:25px}.modal-inner{padding:22px}}
+@media(prefers-reduced-motion:reduce){.liquid-aurora,.float-pill{animation:none!important}}
+
+/* Firestore-only editor: integrated into iPhone-style Liquid Glass */
+.code-paste{margin-top:12px}.code-editor{font:500 0.87rem/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;tab-size:2;min-height:165px;resize:vertical;white-space:pre;overflow:auto}.admin-form .fine-print{line-height:1.5}
+
+
+/* CIRCUITX ULTRA / iPhone-style liquid glass finishing layer */
+:root{--cx-highlight:rgba(255,255,255,.93);--cx-rim:rgba(255,255,255,.82);--cx-sheen:rgba(209,237,255,.64)}
+body{background:radial-gradient(ellipse 42% 28% at 3% 5%,rgba(73,188,255,.47),transparent 82%),radial-gradient(ellipse 48% 33% at 92% 11%,rgba(175,147,255,.41),transparent 84%),radial-gradient(ellipse 50% 25% at 46% 51%,rgba(120,224,233,.20),transparent 90%),linear-gradient(160deg,#e5f8ff 0%,#f4f7ff 38%,#ecf8ff 72%,#e3e9ff 100%);background-attachment:fixed}
+body::before,body::after{content:'';position:fixed;z-index:-1;pointer-events:none;filter:blur(1px);border-radius:50%;border:1px solid rgba(255,255,255,.47);box-shadow:inset 8px 10px 24px rgba(255,255,255,.45),inset -10px -15px 35px rgba(82,131,255,.12),0 15px 45px rgba(63,124,208,.12)}
+body::before{width:195px;height:195px;right:-80px;top:24%;animation:cxFloat 13s ease-in-out infinite alternate}
+body::after{width:110px;height:110px;left:-56px;top:67%;animation:cxFloat 10s ease-in-out infinite alternate-reverse}
+@keyframes cxFloat{to{transform:translate(0,42px) rotate(9deg)}}
+.glass-shell{border:1px solid var(--cx-rim);background:linear-gradient(135deg,rgba(255,255,255,.56),rgba(237,248,255,.31) 56%,rgba(223,235,255,.46));box-shadow:0 21px 60px rgba(49,111,175,.12),0 5px 13px rgba(73,109,177,.05),inset 0 1px 0 rgba(255,255,255,.96),inset 0 -1px 0 rgba(255,255,255,.33);-webkit-backdrop-filter:blur(34px) saturate(185%);backdrop-filter:blur(34px) saturate(185%)}
+.glass-shell::before{background:linear-gradient(155deg,rgba(255,255,255,.56) 0%,transparent 47%,rgba(194,220,255,.17) 80%)}
+.site-header{border-radius:26px;background:linear-gradient(110deg,rgba(242,250,255,.69),rgba(234,243,255,.49));box-shadow:0 18px 55px rgba(29,87,168,.11),inset 0 1px #fff,inset 0 -1px rgba(255,255,255,.25);border:1px solid rgba(255,255,255,.88);-webkit-backdrop-filter:blur(40px) saturate(185%);backdrop-filter:blur(40px) saturate(185%)}
+.site-header::after{content:'';position:absolute;inset:1px 20px auto 20px;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.9),transparent);pointer-events:none}
+.brand-mark{background:linear-gradient(137deg,#89cbff 0%,#367ff8 48%,#5265fa 100%);border:1px solid #f6fdff;box-shadow:0 8px 20px rgba(56,120,235,.33),inset 0 2px 2px #ffffff9c;transform:rotate(-3deg)}
+.brand strong{letter-spacing:-1.25px}
+.hero{min-height:535px}
+.hero h1{font-weight:800;letter-spacing:-3.4px;line-height:1.055;font-size:clamp(44px,5.6vw,77px)}
+.hero h1 em{font-style:normal;background:linear-gradient(100deg,#1aa0e8,#5379fc 55%,#976cf7);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-visual-topline{letter-spacing:3px}
+.eyebrow,.mini-chip,.chip,.icon-btn,.soft-btn,.filter-pill{box-shadow:0 5px 15px rgba(70,119,195,.08),inset 0 1px #fff;backdrop-filter:blur(22px) saturate(165%);-webkit-backdrop-filter:blur(22px) saturate(165%)}
+.primary-btn{border-radius:15px;background:linear-gradient(115deg,#157fe7,#4775fc 54%,#7569f6);box-shadow:0 14px 25px rgba(35,115,227,.25),inset 0 1px rgba(255,255,255,.42)}
+.primary-btn:hover{box-shadow:0 17px 35px rgba(31,95,222,.33);transform:translateY(-2px)}
+.hero-art{filter:drop-shadow(0 24px 30px rgba(75,119,197,.12))}
+.scene-plate{border-radius:42px}
+.float-pill{background:linear-gradient(125deg,rgba(255,255,255,.75),rgba(228,246,255,.65));border:1px solid rgba(255,255,255,.96);box-shadow:inset 0 1px #fff,0 12px 35px rgba(59,111,177,.20);-webkit-backdrop-filter:blur(26px);backdrop-filter:blur(26px)}
+.service-card,.project-card,.stat-box,.feature,.gallery-tile{transition:transform .38s cubic-bezier(.2,.8,.2,1),box-shadow .38s ease,border-color .3s ease}
+.service-card:hover,.project-card:hover,.gallery-tile:hover,.feature:hover{transform:translateY(-8px) scale(1.012);border-color:#fff;box-shadow:0 26px 52px rgba(54,117,208,.19),inset 0 1px #fff}
+.stat-box{border-radius:28px;background:linear-gradient(130deg,rgba(255,255,255,.63),rgba(226,239,255,.39));border-color:rgba(255,255,255,.87)}
+.stat-box strong{background:linear-gradient(135deg,#228de3,#5d67ee);color:transparent;-webkit-background-clip:text;background-clip:text}
+.service-card,.project-card,.feature{border-radius:30px}
+.project-toolbar{border-radius:24px;padding:16px}
+.search-wrap,.select-wrap select{border-radius:16px}
+.filter-pill{border-radius:999px}
+.gallery-tile{border-radius:31px}
+.modal{box-shadow:0 38px 110px rgba(11,48,106,.34),0 5px 20px rgba(19,56,112,.14),inset 0 1px #fff;background:linear-gradient(135deg,rgba(252,255,255,.94),rgba(229,243,255,.88));-webkit-backdrop-filter:blur(48px) saturate(190%);backdrop-filter:blur(48px) saturate(190%)}
+.modal::backdrop{background:rgba(10,26,58,.41);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+body.dark{background:radial-gradient(ellipse 55% 35% at 93% 6%,rgba(88,78,190,.35),transparent 92%),radial-gradient(ellipse 58% 38% at 0% 25%,rgba(42,118,196,.30),transparent 90%),linear-gradient(150deg,#08152d,#0d2143 49%,#111d3f 100%);background-attachment:fixed}
+body.dark .glass-shell{background:linear-gradient(139deg,rgba(53,82,151,.51),rgba(24,46,92,.48) 58%,rgba(45,57,117,.38));border-color:rgba(211,231,255,.23);box-shadow:0 24px 70px rgba(1,7,27,.39),inset 0 1px rgba(255,255,255,.2)}
+body.dark .site-header{background:linear-gradient(110deg,rgba(30,58,109,.73),rgba(35,48,99,.66));border-color:rgba(210,234,255,.27)}
+body.dark .stat-box strong{background:linear-gradient(135deg,#98ddff,#aca6ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+body.dark .modal{background:linear-gradient(145deg,rgba(29,49,94,.97),rgba(20,39,79,.98))}
+@media(max-width:930px){.hero h1{font-size:clamp(42px,6.5vw,68px)}}
+@media(max-width:760px){.hero{min-height:auto}.hero h1{font-size:clamp(42px,9vw,62px);letter-spacing:-2.7px}.site-header{border-radius:24px}.scene-plate{border-radius:28px}}
+@media(max-width:520px){.hero h1{font-size:clamp(40px,10vw,52px);letter-spacing:-2px}.hero-art{filter:none}.service-card:hover,.project-card:hover,.gallery-tile:hover,.feature:hover{transform:translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+/* On small screens the hero is a true single column, never overlapping the illustration. */
+@media(max-width:760px){
+ html,body{max-width:100%;overflow-x:clip}
+ .hero{display:flex;flex-direction:column;align-items:stretch;gap:28px}
+ .hero-copy{width:100%;max-width:100%;padding:0 7px}
+ .hero-art{order:2;width:100%;max-width:100%;margin-top:2px}
+ .float-pill-a{left:1%}.float-pill-b{right:1%}
+}
+
+</style>
+
 </head>
 <body>
   <div class="ambient ambient-a" aria-hidden="true"></div>
@@ -55,7 +370,7 @@
         <div class="hero-proof"><span class="mini-chip">⚡ <span data-i18n="freeIdeas">Project inspiration</span></span><span class="mini-chip">🔧 <span data-i18n="makerFriendly">Maker friendly</span></span><span class="mini-chip">🌐 <span data-i18n="twoLanguages">Tamil + English</span></span></div>
       </div>
       <div class="hero-art" aria-label="Smart city, connected home and technology illustration">
-        <div class="scene-plate"><div class="scene-glint" aria-hidden="true"></div><img src="assets/smart-city.svg" alt="Illustration of a smart city with IoT connectivity, laptop and smart farming" loading="eager"></div>
+        <div class="scene-plate"><div class="scene-glint" aria-hidden="true"></div><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3NjAgNTcwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+Cjx0aXRsZSBpZD0idGl0bGUiPkNpcmN1aXRYIGNvbm5lY3RlZCBzbWFydCBjaXR5PC90aXRsZT48ZGVzYyBpZD0iZGVzYyI+QSBmcmllbmRseSBibHVlIHNtYXJ0IGNpdHkgc2t5bGluZSwgY2xvdWQgY29ubmVjdGlvbnMsIHNtYXJ0IGhvbWUsIHRyZWVzLCBsYXB0b3AgYW5kIElvVCBpY29ucy48L2Rlc2M+CjxkZWZzPgogPGxpbmVhckdyYWRpZW50IGlkPSJza3kiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjYmNmMWZmIi8+PHN0b3Agb2Zmc2V0PSIuNTEiIHN0b3AtY29sb3I9IiM4ZmQyZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNkNGY0ZmYiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJnbGFzcyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiNmOGZmZmYiLz48c3RvcCBvZmZzZXQ9Ii43IiBzdG9wLWNvbG9yPSIjYmNlOWZmIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjN2RjNGVmIi8+PC9saW5lYXJHcmFkaWVudD4KIDxsaW5lYXJHcmFkaWVudCBpZD0idG93ZXIiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjNDViN2Y2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTQ3YmJkIi8+PC9saW5lYXJHcmFkaWVudD4KIDxsaW5lYXJHcmFkaWVudCBpZD0ic2NyZWVuIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iIzYxYzZmNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2M1ZWRmZiIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImxhcHRvcCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiMyNDQ1NmEiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMDI3NDIiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJncm91bmQiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjYjFmM2VhIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNWRkMGJmIi8+PC9saW5lYXJHcmFkaWVudD4KIDxmaWx0ZXIgaWQ9ImJsdXIiPjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjEzIi8+PC9maWx0ZXI+CiA8ZmlsdGVyIGlkPSJzaGFkb3ciIHg9Ii0zMCUiIHk9Ii0zMCUiIHdpZHRoPSIxNjAlIiBoZWlnaHQ9IjE3MCUiPjxmZURyb3BTaGFkb3cgZHg9IjAiIGR5PSIxMiIgc3RkRGV2aWF0aW9uPSIxMSIgZmxvb2QtY29sb3I9IiMwZDU5OTUiIGZsb29kLW9wYWNpdHk9Ii4yMyIvPjwvZmlsdGVyPgogPHBhdHRlcm4gaWQ9IndpbmRvd3MiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMyIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHJlY3QgeD0iNSIgeT0iNSIgd2lkdGg9IjciIGhlaWdodD0iMTAiIHJ4PSIyIiBmaWxsPSIjZTNmYWZmIiBvcGFjaXR5PSIuNjQiLz48L3BhdHRlcm4+CiA8Y2xpcFBhdGggaWQ9ImNsaXAiPjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iNTcwIiByeD0iMzIiLz48L2NsaXBQYXRoPgo8L2RlZnM+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwKSI+CiA8cmVjdCB3aWR0aD0iNzYwIiBoZWlnaHQ9IjU3MCIgcng9IjMyIiBmaWxsPSJ1cmwoI3NreSkiLz4KIDxlbGxpcHNlIGN4PSI1MTAiIGN5PSIxMjUiIHJ4PSIzMzAiIHJ5PSIxNzAiIGZpbGw9IiNlNmZmZmYiIG9wYWNpdHk9Ii40Ii8+CiA8Y2lyY2xlIGN4PSI2MjIiIGN5PSIxMTAiIHI9IjUwIiBmaWxsPSIjZWZmZmZmIiBvcGFjaXR5PSIuNDgiIGZpbHRlcj0idXJsKCNibHVyKSIvPgogPGcgZmlsbD0iI2Y2ZmZmZiIgb3BhY2l0eT0iLjgiPjxlbGxpcHNlIGN4PSI5OSIgY3k9Ijk1IiByeD0iNTQiIHJ5PSIxOCIvPjxlbGxpcHNlIGN4PSIxMzEiIGN5PSI4OCIgcng9IjMwIiByeT0iMjUiLz48ZWxsaXBzZSBjeD0iNDAyIiBjeT0iNzQiIHJ4PSI1NyIgcnk9IjIwIi8+PGVsbGlwc2UgY3g9IjQyNyIgY3k9IjYyIiByeD0iMjgiIHJ5PSIyOSIvPjxlbGxpcHNlIGN4PSI2NjAiIGN5PSIxODQiIHJ4PSI2NCIgcnk9IjE4Ii8+PGVsbGlwc2UgY3g9IjY0MSIgY3k9IjE3NyIgcng9IjMwIiByeT0iMjQiLz48L2c+CiA8ZyBvcGFjaXR5PSIuMzUiIGZpbGw9IiM1YWFmZTMiPjxyZWN0IHg9IjEyIiB5PSIyMDUiIHdpZHRoPSI1MiIgaGVpZ2h0PSIxNzIiLz48cmVjdCB4PSI3MyIgeT0iMjQzIiB3aWR0aD0iNjMiIGhlaWdodD0iMTU2Ii8+PHJlY3QgeD0iMTQwIiB5PSIxODQiIHdpZHRoPSI0NSIgaGVpZ2h0PSIyMTgiLz48cmVjdCB4PSIxOTQiIHk9IjIzMiIgd2lkdGg9IjM4IiBoZWlnaHQ9IjE0NSIvPjxyZWN0IHg9IjI0NiIgeT0iMTc5IiB3aWR0aD0iNDIiIGhlaWdodD0iMjE1Ii8+PHJlY3QgeD0iMjk4IiB5PSIyNDEiIHdpZHRoPSI0MSIgaGVpZ2h0PSIxNDIiLz48cmVjdCB4PSIzNTkiIHk9IjIyNSIgd2lkdGg9Ijc1IiBoZWlnaHQ9IjE1OSIvPjxyZWN0IHg9IjQ2MSIgeT0iMjAxIiB3aWR0aD0iNDQiIGhlaWdodD0iMTc0Ii8+PHJlY3QgeD0iNTg0IiB5PSIyMjAiIHdpZHRoPSIzNSIgaGVpZ2h0PSIxODAiLz48cmVjdCB4PSI2NTEiIHk9IjE1OCIgd2lkdGg9IjQ3IiBoZWlnaHQ9IjIyNCIvPjxyZWN0IHg9IjcwNCIgeT0iMjIzIiB3aWR0aD0iNDciIGhlaWdodD0iMTUyIi8+PC9nPgogPGcgb3BhY2l0eT0iLjg1Ij48cmVjdCB4PSIxNTgiIHk9IjE3MyIgd2lkdGg9IjY2IiBoZWlnaHQ9IjI0OSIgcng9IjQiIGZpbGw9InVybCgjdG93ZXIpIi8+PHJlY3QgeD0iMTY5IiB5PSIxODMiIHdpZHRoPSI0NiIgaGVpZ2h0PSIyMTAiIGZpbGw9InVybCgjd2luZG93cykiLz48cmVjdCB4PSIyNTAiIHk9IjEzNyIgd2lkdGg9Ijk1IiBoZWlnaHQ9IjI5NyIgcng9IjQiIGZpbGw9IiMzMjlhZGMiLz48cmVjdCB4PSIyNjAiIHk9IjE0OCIgd2lkdGg9Ijc0IiBoZWlnaHQ9IjI2OSIgZmlsbD0idXJsKCN3aW5kb3dzKSIvPjxyZWN0IHg9IjI4NSIgeT0iMTE1IiB3aWR0aD0iNyIgaGVpZ2h0PSIyMiIgZmlsbD0iIzE5ODRjMCIvPjxyZWN0IHg9IjM3OSIgeT0iMTgwIiB3aWR0aD0iNzAiIGhlaWdodD0iMjMxIiByeD0iNCIgZmlsbD0iIzUwYjllNSIvPjxyZWN0IHg9IjM5MCIgeT0iMTkwIiB3aWR0aD0iNTEiIGhlaWdodD0iMjEwIiBmaWxsPSJ1cmwoI3dpbmRvd3MpIi8+PHJlY3QgeD0iNDg2IiB5PSIxNDYiIHdpZHRoPSI3MyIgaGVpZ2h0PSIyNzkiIHJ4PSI0IiBmaWxsPSIjMjM4OGNmIi8+PHJlY3QgeD0iNDk0IiB5PSIxNjAiIHdpZHRoPSI1NSIgaGVpZ2h0PSIyMzkiIGZpbGw9InVybCgjd2luZG93cykiLz48cmVjdCB4PSI1MjEiIHk9IjExMCIgd2lkdGg9IjQiIGhlaWdodD0iMzkiIGZpbGw9IiMyNDdmYjciLz48cmVjdCB4PSI1NzAiIHk9IjIwMCIgd2lkdGg9IjcyIiBoZWlnaHQ9IjIyMyIgZmlsbD0iIzU1YjRkZiIvPjxyZWN0IHg9IjU3OSIgeT0iMjEyIiB3aWR0aD0iNTIiIGhlaWdodD0iMTk1IiBmaWxsPSJ1cmwoI3dpbmRvd3MpIi8+PC9nPgogPHBhdGggZD0iTTAgNDE4UTEyNiAzNjAgMjI1IDM5OFQ0ODQgMzk3VDc2MCAzODlWNTcwSDBaIiBmaWxsPSIjYzRmNGViIi8+PHBhdGggZD0iTTAgNDQ1UTEyNSA0MDUgMjMxIDQ0N1Q0OTUgNDQ3VDc2MCA0MjhWNTcwSDBaIiBmaWxsPSIjODVlNGNlIi8+PHBhdGggZD0iTTAgNTA4UTI0NSA0MjYgNDExIDQ4NlQ3NjAgNDc1VjU3MEgwWiIgZmlsbD0iIzU1YzVhZiIgb3BhY2l0eT0iLjY4Ii8+CiA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzOCAzNTApIj48cmVjdCB4PSIxNCIgeT0iMzciIHdpZHRoPSIxNDMiIGhlaWdodD0iMTE4IiBmaWxsPSIjZTlmYWZmIi8+PHBhdGggZD0iTTEgNDlMODUgLTZMMTc0IDQ5WiIgZmlsbD0iIzI0N2NjOCIvPjxwYXRoIGQ9Ik0yNyA0OUw4NSA5TDE0OCA0OVoiIGZpbGw9IiM2OGI4ZTQiLz48cmVjdCB4PSI2OSIgeT0iOTIiIHdpZHRoPSIzOCIgaGVpZ2h0PSI2MyIgZmlsbD0iIzNjOGZkMCIvPjxyZWN0IHg9IjMwIiB5PSI3MCIgd2lkdGg9IjMxIiBoZWlnaHQ9IjI5IiByeD0iMyIgZmlsbD0iIzczY2NmNCIvPjxyZWN0IHg9IjExNyIgeT0iNzAiIHdpZHRoPSIyOSIgaGVpZ2h0PSIyOSIgcng9IjMiIGZpbGw9IiM3M2NjZjQiLz48cGF0aCBkPSJNODQgMzV2LTMwIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMyIvPjxwYXRoIGQ9Ik02MyAxNWEyOSAyOSAwIDAgMSA0MiAwTTcwIDIyYTE5IDE5IDAgMCAxIDI4IDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L2c+CiA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4IDM4OCkiPjxwYXRoIGQ9Ik0yNCA3M1YwIiBzdHJva2U9IiMyZDk0NjUiIHN0cm9rZS13aWR0aD0iOCIvPjxwYXRoIGQ9Ik0yNCA1TC0yIDU2SDQ4WiIgZmlsbD0iIzI4OWU3NiIvPjxwYXRoIGQ9Ik0yNCAtMTJMLTEwIDM5SDU4WiIgZmlsbD0iIzMxYjg4YyIvPjxwYXRoIGQ9Ik02NSA5M1YyNiIgc3Ryb2tlPSIjMmQ5NDY1IiBzdHJva2Utd2lkdGg9IjciLz48cGF0aCBkPSJNNjUgMTFMMzMgNjlIOTdaIiBmaWxsPSIjMmRiMTdiIi8+PC9nPgogPGcgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iLjg2Ij48cGF0aCBkPSJNMTAwIDE1MVEyNDggMjQgMzk5IDE1MSIgc3Ryb2tlLWRhc2hhcnJheT0iNyAxMCIvPjxwYXRoIGQ9Ik0zOTggMTUxUTQ5NiA1MSA2MDcgMTUxIiBzdHJva2UtZGFzaGFycmF5PSI3IDEwIi8+PHBhdGggZD0iTTQzOCAxNThRNTE2IDE2MiA1OTMgMjIwIiBzdHJva2UtZGFzaGFycmF5PSI3IDEwIi8+PHBhdGggZD0iTTEwNiAxNTlRMTIxIDI0NSAyMjIgMjY0IiBzdHJva2UtZGFzaGFycmF5PSI3IDEwIi8+PC9nPgogPGcgZmlsdGVyPSJ1cmwoI3NoYWRvdykiPgogIDxjaXJjbGUgY3g9IjEwMCIgY3k9IjE1MyIgcj0iMzMiIGZpbGw9IiNmN2ZmZmYiLz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxNTMiIHI9IjI1IiBmaWxsPSIjYmNlYWZmIi8+PHBhdGggZD0iTTg2IDE0OVExMDAgMTM1IDExNCAxNDlNOTIgMTU1UTEwMCAxNDggMTA4IDE1NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDg4ZWUxIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjE2MiIgcj0iNCIgZmlsbD0iIzA4OGVlMSIvPgogIDxjaXJjbGUgY3g9IjM5OCIgY3k9IjE1MSIgcj0iMzIiIGZpbGw9IiNmN2ZmZmYiLz48Y2lyY2xlIGN4PSIzOTgiIGN5PSIxNTEiIHI9IjI0IiBmaWxsPSIjYzFlZmZmIi8+PHBhdGggZD0iTTM4MiAxNThoMzJNMzg5IDE1MHYtMTJoMTh2MTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzA0NzljNCIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSIzOTgiIGN5PSIxNTciIHI9IjQiIGZpbGw9IiMwNDc5YzQiLz4KICA8Y2lyY2xlIGN4PSI2MDgiIGN5PSIxNTIiIHI9IjMxIiBmaWxsPSIjZjdmZmZmIi8+PGNpcmNsZSBjeD0iNjA4IiBjeT0iMTUyIiByPSIyMyIgZmlsbD0iI2MxZWZmZiIvPjxwYXRoIGQ9Ik01OTYgMTUzaDI0bS0xOS04aDE0bS0xNCAxNmgxNCIgc3Ryb2tlPSIjMDY3Y2NlIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogPC9nPgogPGcgZmlsdGVyPSJ1cmwoI3NoYWRvdykiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI5NSAyNTQpIj4KICA8cmVjdCB3aWR0aD0iNDA1IiBoZWlnaHQ9IjI1OCIgcng9IjE5IiBmaWxsPSJ1cmwoI2xhcHRvcCkiLz4KICA8cmVjdCB4PSIxMyIgeT0iMTMiIHdpZHRoPSIzNzkiIGhlaWdodD0iMjMwIiByeD0iMTAiIGZpbGw9InVybCgjc2NyZWVuKSIvPgogIDxyZWN0IHg9IjIzIiB5PSIyNCIgd2lkdGg9IjM1OSIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiNlOGZhZmYiIG9wYWNpdHk9Ii44NyIvPjxjaXJjbGUgY3g9IjQxIiBjeT0iMzgiIHI9IjUiIGZpbGw9IiM2M2NhZTkiLz48Y2lyY2xlIGN4PSI1OCIgY3k9IjM4IiByPSI1IiBmaWxsPSIjOGFkYmM4Ii8+PHJlY3QgeD0iNzYiIHk9IjMzIiB3aWR0aD0iOTUiIGhlaWdodD0iOSIgcng9IjQuNSIgZmlsbD0iIzlkZDBlOCIvPgogIDxyZWN0IHg9IjI5IiB5PSI2MiIgd2lkdGg9IjE2OCIgaGVpZ2h0PSIxNjUiIHJ4PSIxMyIgZmlsbD0iI2U4ZmJmZiIgb3BhY2l0eT0iLjg0Ii8+PHRleHQgeD0iNDMiIHk9IjgyIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZmlsbD0iIzI0N2JhOCIgZm9udC13ZWlnaHQ9IjcwMCI+U01BUlQgRkFSTTwvdGV4dD48cGF0aCBkPSJNNDQgMTcyUTgwIDEzMyAxMTIgMTU5VDE4MiAxMzYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzQzYzRhMiIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNNDQgMTgyTDcwIDE5OEw5MSAxNzBMMTI4IDIxMUwxNzQgMTc0IiBmaWxsPSJub25lIiBzdHJva2U9IiM0ZGE2ZTAiIHN0cm9rZS13aWR0aD0iNSIvPjxyZWN0IHg9IjQ1IiB5PSI5NSIgd2lkdGg9IjEzMiIgaGVpZ2h0PSI5IiByeD0iNCIgZmlsbD0iIzllZTJlZSIvPjxyZWN0IHg9IjQ1IiB5PSIxMTMiIHdpZHRoPSI4NiIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0iI2EzZGNlYiIvPgogIDxyZWN0IHg9IjIxMiIgeT0iNjIiIHdpZHRoPSIxNjQiIGhlaWdodD0iMTY1IiByeD0iMTQiIGZpbGw9IiNkNGYzZmEiIG9wYWNpdHk9Ii45NCIvPjxjaXJjbGUgY3g9IjI5MyIgY3k9IjEyOSIgcj0iNTUiIGZpbGw9IiNiMWU5ZTciLz48cGF0aCBkPSJNMjM2IDE0NWw1NS00OWw2MCA0OXoiIGZpbGw9IiMyYThiYzUiLz48cmVjdCB4PSIyNTEiIHk9IjE0NCIgd2lkdGg9IjkxIiBoZWlnaHQ9IjU2IiBmaWxsPSIjZjhmZmZmIi8+PHJlY3QgeD0iMjgzIiB5PSIxNTkiIHdpZHRoPSIyNyIgaGVpZ2h0PSI0MSIgZmlsbD0iIzczYzRlNiIvPjxyZWN0IHg9IjI1NiIgeT0iMTUyIiB3aWR0aD0iMTgiIGhlaWdodD0iMTYiIGZpbGw9IiM4NGRjZjEiLz48cmVjdCB4PSIzMTgiIHk9IjE1MiIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE2IiBmaWxsPSIjODRkY2YxIi8+PGVsbGlwc2UgY3g9IjI5MiIgY3k9IjIwOSIgcng9IjY5IiByeT0iMTMiIGZpbGw9IiM2OWM2YjUiLz4KICA8Y2lyY2xlIGN4PSIyMDIiIGN5PSI4IiByPSIzIiBmaWxsPSIjOGZhZGM1Ii8+CiAgPHBhdGggZD0iTS0zMyAyNjNoNDcxbC0zMCAyNEgwWiIgZmlsbD0iIzdhOWNiNSIvPjxwYXRoIGQ9Ik0tMjMgMjYzaDQ1MGwtMTMgMTBILTExWiIgZmlsbD0iI2Q1ZThmMiIvPjxyZWN0IHg9IjE3NSIgeT0iMjY1IiB3aWR0aD0iNzgiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9IiNhM2JhY2IiLz4KIDwvZz4KIDxnIGZpbGw9IiNmZmYiIG9wYWNpdHk9Ii42NSI+PGNpcmNsZSBjeD0iNzAyIiBjeT0iNDkiIHI9IjUiLz48Y2lyY2xlIGN4PSI2ODAiIGN5PSI3NiIgcj0iMyIvPjxjaXJjbGUgY3g9IjU0IiBjeT0iMjMzIiByPSIzIi8+PGNpcmNsZSBjeD0iMzQyIiBjeT0iNjciIHI9IjMiLz48L2c+CjwvZz48L3N2Zz4K" alt="Illustration of a smart city with IoT connectivity, laptop and smart farming" loading="eager"></div>
         <div class="float-pill float-pill-a"><span>◉</span> <span>IoT <b>ONLINE</b></span></div>
         <div class="float-pill float-pill-b"><span>🌱</span> <span data-i18n="smartFarming">Smart farming</span></div><div class="float-pill float-pill-c"><span class="signal-circle">↗</span><span>LIVE SYSTEMS<br><b>BUILD • CONNECT</b></span></div>
       </div>
@@ -125,14 +440,715 @@
   <dialog id="projectDialog" class="modal project-modal glass-shell" aria-labelledby="projectModalTitle"><div class="modal-inner"><div class="modal-head"><span class="overline" data-i18n="projectDetails">PROJECT DETAILS</span><button type="button" class="icon-btn close-modal" data-close="projectDialog" aria-label="Close">✕</button></div><div id="projectModalArt" class="detail-art"></div><div id="projectModalMeta" class="project-meta"></div><h2 id="projectModalTitle"></h2><p id="projectModalDescription" class="detail-desc"></p><div id="projectModalTags" class="tags"></div><div class="detail-actions"><button id="projectDownload" type="button" class="primary-btn" hidden data-i18n="downloadCode">Download code</button><span id="projectNoDownload" class="fine-print" data-i18n="noDownload">Code file is not available for this project yet.</span></div></div></dialog>
 
   <dialog id="adminDialog" class="modal admin-modal glass-shell" aria-labelledby="adminTitle"><div class="modal-inner"><div class="modal-head"><div><span class="overline" data-i18n="adminEyebrow">ADMIN ONLY</span><h2 id="adminTitle" data-i18n="adminTitle">Project dashboard</h2></div><button type="button" class="icon-btn close-modal" data-close="adminDialog" aria-label="Close">✕</button></div><p class="fine-print" data-i18n="adminIntro">Publish projects with a verified, approved admin account.</p><form id="projectForm" class="admin-form"><div class="field-grid"><label class="field"><span data-i18n="titleEn">Project title (English)</span><input name="titleEn" required maxlength="100"></label><label class="field"><span data-i18n="titleTa">Project title (Tamil)</span><input name="titleTa" maxlength="100"></label></div><div class="field-grid"><label class="field"><span data-i18n="descEn">Description (English)</span><textarea name="descriptionEn" rows="3" required maxlength="2000"></textarea></label><label class="field"><span data-i18n="descTa">Description (Tamil)</span><textarea name="descriptionTa" rows="3" maxlength="2000"></textarea></label></div><div class="field-grid"><label class="field"><span data-i18n="category">Category</span><select name="category"><option value="farming" data-i18n="catFarming">Smart Farming</option><option value="home" data-i18n="catHome">Smart Home</option><option value="iot" data-i18n="catIot">IoT</option><option value="robotics" data-i18n="catRobotics">Robotics</option><option value="electronics" data-i18n="catElectronics">Electronics</option></select></label><label class="field"><span data-i18n="difficulty">Difficulty</span><select name="level"><option value="beginner" data-i18n="beginner">Beginner</option><option value="intermediate" data-i18n="intermediate">Intermediate</option><option value="advanced" data-i18n="advanced">Advanced</option></select></label></div><label class="field"><span data-i18n="tagsLabel">Tags (comma separated)</span><input name="tags" maxlength="300" placeholder="Arduino, ESP32, LoRa"></label><div class="field-grid"><label class="field"><span data-i18n="coverFile">Cover image (optional; max 2 MB)</span><input name="cover" type="file" accept="image/png,image/jpeg,image/webp"></label><label class="field"><span data-i18n="codeFile">Arduino source file (optional; UTF-8, max 80 KB)</span><input name="code" type="file" accept=".ino,.cpp,.h,.txt,.md,.json,.py"></label></div><label class="field code-paste"><span data-i18n="pasteCode">Or paste Arduino code (instead of selecting a file)</span><textarea name="codeText" rows="7" maxlength="100000" spellcheck="false" class="code-editor" placeholder="// setup() and loop()..."></textarea></label><p class="fine-print" data-i18n="fileReminder">Spark Free: only small UTF-8 source files, protected inside Firestore. ZIP/PDF are not supported.</p><button id="publishBtn" class="primary-btn full" type="submit" data-i18n="publish">Publish project</button></form><div class="admin-list-head"><h3 data-i18n="publishedProjects">Published projects</h3><button id="refreshBtn" type="button" class="soft-btn small" data-i18n="refresh">Refresh</button></div><div id="adminList" class="admin-list"></div><div class="admin-list-head"><h3 data-i18n="inboxTitle">Contact inbox</h3><button id="refreshInboxBtn" type="button" class="soft-btn small" data-i18n="refresh">Refresh</button></div><div id="inboxList" class="admin-list"></div></div></dialog>
-<script>
-  // Safety net: show an actionable message when src/app.js never executes.
+<script type="module">
+// CircuitX Firebase public WEB config (not a secret).
+// Project: circketx-df07a | Admin: ruheeshruheesh5@gmail.com
+// Do NOT paste a service-account JSON / private key into this file.
+const firebaseConfig = {
+  apiKey: "AIzaSyBUwAmGo0dR5vZ7nYegMdMdc6bpNsrv--E",
+  authDomain: "circketx-df07a.firebaseapp.com",
+  databaseURL: "https://circketx-df07a-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "circketx-df07a",
+  storageBucket: "circketx-df07a.firebasestorage.app",
+  messagingSenderId: "963143474944",
+  appId: "1:963143474944:web:f3411a3003f7c4daa09de5",
+  measurementId: "G-N5TJVQ5M89"
+};
+
+const isFirebaseConfigured =
+  Boolean(firebaseConfig.apiKey && firebaseConfig.projectId && firebaseConfig.appId) &&
+  !Object.values(firebaseConfig).some(value => typeof value === 'string' && value.includes('REPLACE_WITH'));
+
+// These are illustrative placeholders, not published Firebase projects.
+const sampleProjects = [
+  {id:'sample-greenhouse',titleEn:'Smart Greenhouse with LoRa',titleTa:'LoRa ஸ்மார்ட் பசுமைக்குடில்',descriptionEn:'Explore a greenhouse concept using LoRa sensors, temperature, humidity, soil moisture and remote pump control.',descriptionTa:'LoRa மூலம் வெப்பநிலை, ஈரப்பதம், மண் ஈரத்தன்மை, தண்ணீர் பம்ப் ஆகியவற்றைக் கண்காணிக்கும் பசுமைக்குடில் திட்டம்.',category:'farming',level:'advanced',tags:['LoRa','ESP32','DHT22'],icon:'🌿',color:'green',demo:true,hasCode:false,coverDataUrl:''},
+  {id:'sample-home',titleEn:'ESP32 Smart Home',titleTa:'ESP32 ஸ்மார்ட் வீடு',descriptionEn:'An example home automation build with smart switching and remote controls.',descriptionTa:'விளக்குகள் மற்றும் மின்சாதனங்களை ரிமோட் மூலம் கட்டுப்படுத்தும் மாதிரி திட்டம்.',category:'home',level:'intermediate',tags:['ESP32','Relay','Wi-Fi'],icon:'🏡',color:'blue',demo:true,hasCode:false,coverDataUrl:''},
+  {id:'sample-weather',titleEn:'IoT Weather Station',titleTa:'IoT வானிலை நிலையம்',descriptionEn:'An example climate station using sensors and an online dashboard.',descriptionTa:'சென்சார்கள் மற்றும் ஆன்லைன் டாஷ்போர்டுடன் வானிலை பதிவிடும் மாதிரி திட்டம்.',category:'iot',level:'beginner',tags:['Arduino','DHT22','Cloud'],icon:'🌤️',color:'sky',demo:true,hasCode:false,coverDataUrl:''},
+  {id:'sample-robot',titleEn:'Obstacle Avoiding Robot',titleTa:'தடைகளைத் தவிர்க்கும் ரோபோ',descriptionEn:'An example beginner robot that detects obstacles with an ultrasonic sensor.',descriptionTa:'Ultrasonic சென்சார் மூலம் தடைகளை அறிந்து நகரும் மாதிரி ரோபோ.',category:'robotics',level:'beginner',tags:['Arduino','HC-SR04'],icon:'🤖',color:'purple',demo:true,hasCode:false,coverDataUrl:''},
+  {id:'sample-led',titleEn:'Arduino LED Controller',titleTa:'Arduino LED கட்டுப்பாடு',descriptionEn:'A simple Arduino electronics concept for controlling an LED sequence.',descriptionTa:'Arduino கொண்டு LED-களை வரிசையாக ஒளிரச் செய்யும் எளிய திட்டம்.',category:'electronics',level:'beginner',tags:['Arduino','LED'],icon:'💡',color:'gold',demo:true,hasCode:false,coverDataUrl:''},
+  {id:'sample-garden',titleEn:'Automatic Garden Watering',titleTa:'தானியங்கி தோட்ட நீர்ப்பாசனம்',descriptionEn:'A sample irrigation idea using soil readings and a water pump.',descriptionTa:'மண்ணின் ஈரத்தன்மைப்படி பம்பை இயக்கும் மாதிரி நீர்ப்பாசன திட்டம்.',category:'farming',level:'intermediate',tags:['Soil','Pump'],icon:'💧',color:'green',demo:true,hasCode:false,coverDataUrl:''}
+];
+
+const dictionary = {
+  en: {
+    brandSubtitle:'Ideas into innovation',navHome:'Home',navServices:'Solutions',navProjects:'Projects',navAbout:'Why CircuitX',navContact:'Contact',login:'Login',register:'Sign up',logout:'Log out',dashboard:'Dashboard',heroBadge:'ARDUINO · ESP32 · SMART IoT',heroTitle:'Build a smarter<br><em>tomorrow.</em>',heroText:'Discover practical Arduino projects, ESP32 builds, IoT automation and smart farming solutions, all in one beautiful space.',exploreProjects:'Explore Projects',ourSolutions:'Our Solutions',freeIdeas:'Project inspiration',makerFriendly:'Maker friendly',twoLanguages:'Tamil + English',smartFarming:'Smart farming',whatWeCreate:'WHAT WE CREATE',servicesTitle:'Explore smart solutions',servicesIntro:'From greenhouses to smart homes, make technology useful in the real world.',serviceHome:'Smart Home',serviceHomeText:'Control lights, fans and everyday devices.',serviceFarm:'Smart Farming',serviceFarmText:'Automate irrigation and monitor soil health.',serviceCity:'IoT Monitoring',serviceCityText:'Understand sensor data as it happens.',serviceRobot:'Robotics',serviceRobotText:'Build creative robots and automation ideas.',buildLibrary:'BUILD LIBRARY',projectsTitle:'Featured projects',projectsIntro:'Search, filter and discover your next build.',searchLabel:'Search projects',searchPlaceholder:'Search Arduino, ESP32, greenhouse...',filterLabel:'Category filter',levelLabel:'Difficulty',allCategories:'All categories',catFarming:'Smart Farming',catHome:'Smart Home',catIot:'IoT',catRobotics:'Robotics',catElectronics:'Electronics',allLevels:'All levels',beginner:'Beginner',intermediate:'Intermediate',advanced:'Advanced',demoNote:'Preview projects. Connect Firebase to publish real projects.',noProjects:'No projects found',tryDifferent:'Try a different search or category.',whyEyebrow:'WHY CIRCUITX?',whyTitle:'Made for curious minds',whySubtitle:'A better place for your next electronics adventure.',featureLive:'Real-world IoT',featureLiveText:'Discover ideas built around sensors and connectivity.',featureFiles:'Code downloads',featureFilesText:'Get files for projects when authors provide them.',featureSafe:'Verified accounts',featureSafeText:'Email verification and admin-only publishing.',featureLang:'Two languages',featureLangText:'Explore in English or Tamil with one tap.',haveIdea:'HAVE AN IDEA?',ctaTitle:'Let’s build something brilliant.',ctaText:'Explore the projects or reach out with your project idea.',browseLibrary:'Browse project library',footerLine:'Create · Connect · Innovate',backTop:'Back to top ↑',verifyNeeded:'Verify your email',verifyBody:'Open your inbox, click the verification link, then check again.',resend:'Resend email',checkVerified:"I've verified",welcomeBack:'Welcome back',email:'Email address',password:'Password',authHelp:'Log in with your Firebase account.',authHelpRegister:'Create a new account. We will send a verification email.',forgotPassword:'Forgot password?',projectDetails:'PROJECT DETAILS',downloadCode:'Download code ↗',noDownload:'No download file is available for this project yet.',adminEyebrow:'ADMIN ONLY',adminTitle:'Project dashboard',adminIntro:'Publish projects with a verified, approved admin account.',titleEn:'Project title (English)',titleTa:'Project title (Tamil)',descEn:'Description (English)',descTa:'Description (Tamil)',category:'Category',difficulty:'Difficulty',tagsLabel:'Tags (comma separated)',coverFile:'Cover image (optional, max 5 MB)',codeFile:'Project code/document (optional, max 10 MB)',codeUrlLabel:'Download URL (optional; use a public HTTPS link instead of uploading a file)',fileReminder:'Upload only files you own and want visitors to download publicly.',publish:'Publish project',publishedProjects:'Published projects',refresh:'Refresh',viewProject:'View project',results:'projects shown',demoBadge:'DEMO',delete:'Delete',noAdminProjects:'No published projects yet.',setupNeeded:'Firebase is not configured. See README_SETUP.md inside the ZIP.',authError:'Authentication failed. Check your credentials or Firebase settings.',networkError:'Could not connect to Firebase. Check your connection and settings.',fillRequired:'Please fill in the required fields.',signedOut:'You have logged out.',signedIn:'You are logged in.',registrationSent:'Account created. Check your email for the verification link.',verifySent:'Verification email sent. Check your inbox/spam folder.',verificationPending:'Not verified yet. Open the verification email and try again.',verified:'Email verified successfully.',resetSent:'If this email is registered, a reset email may be sent.',adminBlocked:'Only approved, email-verified admins can publish projects.',uploading:'Uploading project...',published:'Project published successfully.',deleted:'Project deleted.',deleteConfirm:'Delete this project and its uploaded files?',demoDownload:'This is a demo project with no downloadable file.',loading:'Loading projects...',youAreLoggedIn:'Signed in as',adminRequired:'Your email is verified, but this account is not an admin.',fileTooBig:'File is too large.',invalidFile:'File format not supported.',retry:'Please try again.',noFile:'No file',demoProjects:'Sample projects for preview',invalidName:'Invalid filename',projectNotReady:'Project file cannot be loaded.',publishFailed:'Project publishing failed. Check Firestore rules.',removeFailed:'Could not delete the project. Check your Firebase rules.'
+  },
+  ta: {
+    brandSubtitle:'சிந்தனையிலிருந்து சாதனைக்கு',navHome:'முகப்பு',navServices:'சேவைகள்',navProjects:'திட்டங்கள்',navAbout:'ஏன் CircuitX?',navContact:'தொடர்பு',login:'உள்நுழை',register:'பதிவு செய்',logout:'வெளியேறு',dashboard:'நிர்வாகம்',heroBadge:'ARDUINO · ESP32 · ஸ்மார்ட் IoT',heroTitle:'இன்றைய யோசனை.<br><em>நாளைய உலகம்.</em>',heroText:'Arduino, ESP32, IoT தொழில்நுட்பம், தானியங்கி அமைப்புகள், ஸ்மார்ட் விவசாயத் திட்டங்கள் அனைத்தையும் ஒரே அழகிய இடத்தில் காணுங்கள்.',exploreProjects:'திட்டங்களைப் பாருங்கள்',ourSolutions:'எங்கள் சேவைகள்',freeIdeas:'புதிய திட்ட யோசனைகள்',makerFriendly:'கற்றலுக்கு எளிது',twoLanguages:'தமிழ் + ஆங்கிலம்',smartFarming:'ஸ்மார்ட் விவசாயம்',whatWeCreate:'நாம் உருவாக்குவது',servicesTitle:'ஸ்மார்ட் தொழில்நுட்பங்கள்',servicesIntro:'பசுமைக்குடில் முதல் ஸ்மார்ட் வீடு வரை, நிஜ வாழ்க்கைக்கு உதவும் தொழில்நுட்பங்கள்.',serviceHome:'ஸ்மார்ட் வீடு',serviceHomeText:'விளக்குகள், விசிறிகள் மற்றும் சாதனங்களை கட்டுப்படுத்துங்கள்.',serviceFarm:'ஸ்மார்ட் விவசாயம்',serviceFarmText:'நீர்ப்பாசனம் மற்றும் மண் ஈரத்தன்மை கண்காணிப்பு.',serviceCity:'IoT கண்காணிப்பு',serviceCityText:'சென்சார் தகவல்களை உடனுக்குடன் அறியுங்கள்.',serviceRobot:'ரோபோடிக்ஸ்',serviceRobotText:'புதுமையான ரோபோக்களையும் தானியங்கி கருவிகளையும் உருவாக்குங்கள்.',buildLibrary:'திட்டங்களின் தொகுப்பு',projectsTitle:'சிறப்புத் திட்டங்கள்',projectsIntro:'தேடுங்கள், வகைப்படுத்துங்கள், புதிய திட்டங்களை அறியுங்கள்.',searchLabel:'திட்டங்களைத் தேடு',searchPlaceholder:'Arduino, ESP32, பசுமைக்குடில் தேடுங்கள்...',filterLabel:'வகை தேர்வு',levelLabel:'சிரம நிலை',allCategories:'எல்லா வகைகளும்',catFarming:'ஸ்மார்ட் விவசாயம்',catHome:'ஸ்மார்ட் வீடு',catIot:'IoT',catRobotics:'ரோபோடிக்ஸ்',catElectronics:'மின்னணுவியல்',allLevels:'எல்லா நிலைகளும்',beginner:'ஆரம்பம்',intermediate:'இடைநிலை',advanced:'மேம்பட்டது',demoNote:'இவை மாதிரி திட்டங்கள். உண்மையான திட்டங்களை வெளியிட Firebase இணைக்கவும்.',noProjects:'திட்டங்கள் கிடைக்கவில்லை',tryDifferent:'வேறு சொல்லை அல்லது வகையைத் தேர்வு செய்யுங்கள்.',whyEyebrow:'ஏன் CIRCUITX?',whyTitle:'ஆர்வமுள்ள மாணவர்களுக்காக',whySubtitle:'உங்கள் அடுத்த மின்னணுவியல் முயற்சிக்கான இடம்.',featureLive:'நிஜ உலக IoT',featureLiveText:'சென்சார்களையும் இணைப்புகளையும் பயன்படுத்தும் திட்டங்கள்.',featureFiles:'Code பதிவிறக்கம்',featureFilesText:'வழங்கப்பட்ட திட்டங்களுக்கான கோப்புகளைப் பெறலாம்.',featureSafe:'சரிபார்க்கப்பட்ட கணக்குகள்',featureSafeText:'மின்னஞ்சல் சரிபார்ப்பு மற்றும் Admin மட்டும் வெளியிடும் வசதி.',featureLang:'இரண்டு மொழிகள்',featureLangText:'தமிழ் அல்லது ஆங்கிலத்தில் ஒரே கிளிக்கில் பார்க்கலாம்.',haveIdea:'உங்களிடம் யோசனை உள்ளதா?',ctaTitle:'புதியதை ஒன்றாக உருவாக்குவோம்.',ctaText:'திட்டங்களைப் பாருங்கள் அல்லது உங்கள் திட்ட யோசனையைப் பகிருங்கள்.',browseLibrary:'திட்டங்களைப் பாருங்கள்',footerLine:'உருவாக்கு · இணை · புதுமை',backTop:'மேலே செல்ல ↑',verifyNeeded:'மின்னஞ்சலைச் சரிபார்க்கவும்',verifyBody:'Inbox-இல் உள்ள இணைப்பைத் திறந்து, பிறகு மீண்டும் சரிபார்க்கவும்.',resend:'மீண்டும் அனுப்பு',checkVerified:'சரிபார்த்துவிட்டேன்',welcomeBack:'மீண்டும் வரவேற்கிறோம்',email:'மின்னஞ்சல் முகவரி',password:'கடவுச்சொல்',authHelp:'Firebase கணக்கைப் பயன்படுத்தி உள்நுழையுங்கள்.',authHelpRegister:'புதிய கணக்கு உருவாக்குங்கள். சரிபார்ப்பு மின்னஞ்சல் அனுப்பப்படும்.',forgotPassword:'கடவுச்சொல் மறந்ததா?',projectDetails:'திட்ட விவரம்',downloadCode:'Code பதிவிறக்கு ↗',noDownload:'இந்தத் திட்டத்திற்கு இன்னும் கோப்பு சேர்க்கப்படவில்லை.',adminEyebrow:'ADMIN மட்டும்',adminTitle:'திட்ட நிர்வாகம்',adminIntro:'அங்கீகரிக்கப்பட்ட, மின்னஞ்சல் சரிபார்த்த Admin மட்டுமே திட்டங்களை வெளியிடலாம்.',titleEn:'திட்டப் பெயர் (ஆங்கிலம்)',titleTa:'திட்டப் பெயர் (தமிழ்)',descEn:'விவரம் (ஆங்கிலம்)',descTa:'விவரம் (தமிழ்)',category:'வகை',difficulty:'சிரம நிலை',tagsLabel:'குறிச்சொற்கள் (காற்புள்ளியுடன்)',coverFile:'அட்டைப் படம் (விருப்பம், அதிகபட்சம் 5 MB)',codeFile:'Code / ஆவணம் (விருப்பம், அதிகபட்சம் 10 MB)',codeUrlLabel:'பதிவிறக்க URL (விருப்பம்; கோப்பு upload செய்யாமல் HTTPS link கொடுக்கலாம்)',fileReminder:'உங்களுக்குச் சொந்தமான, பொதுவாக பதிவிறக்கம் செய்யத் தகுதியான கோப்புகளை மட்டும் பதிவேற்றுங்கள்.',publish:'திட்டத்தை வெளியிடு',publishedProjects:'வெளியிடப்பட்ட திட்டங்கள்',refresh:'புதுப்பி',viewProject:'திட்டத்தைப் பார்',results:'திட்டங்கள் காட்டப்படுகின்றன',demoBadge:'மாதிரி',delete:'நீக்கு',noAdminProjects:'இன்னும் திட்டங்கள் வெளியிடப்படவில்லை.',setupNeeded:'Firebase அமைக்கப்படவில்லை. ZIP-ல் உள்ள README_SETUP.md பார்க்கவும்.',authError:'உள்நுழைவு தோல்வி. Firebase அமைப்புகள் அல்லது தகவல்களைச் சரிபார்க்கவும்.',networkError:'Firebase உடன் இணையவில்லை. இணையத்தைச் சரிபார்க்கவும்.',fillRequired:'தேவையான விவரங்களைப் பூர்த்தி செய்யுங்கள்.',signedOut:'வெளியேறிவிட்டீர்கள்.',signedIn:'உள்நுழைந்துள்ளீர்கள்.',registrationSent:'கணக்கு உருவானது. மின்னஞ்சலில் உள்ள சரிபார்ப்பு இணைப்பைத் திறக்கவும்.',verifySent:'சரிபார்ப்பு மின்னஞ்சல் அனுப்பப்பட்டது. Inbox/Spam பார்க்கவும்.',verificationPending:'இன்னும் சரிபார்க்கப்படவில்லை. மின்னஞ்சல் இணைப்பைத் திறக்கவும்.',verified:'மின்னஞ்சல் சரிபார்ப்பு முடிந்தது.',resetSent:'இந்த மின்னஞ்சல் பதிவு செய்யப்பட்டிருந்தால் மீட்டமைப்பு இணைப்பு அனுப்பப்படலாம்.',adminBlocked:'அங்கீகரிக்கப்பட்ட, மின்னஞ்சல் சரிபார்த்த Admin மட்டுமே திட்டம் வெளியிடலாம்.',uploading:'திட்டம் பதிவேற்றப்படுகிறது...',published:'திட்டம் வெளியிடப்பட்டது.',deleted:'திட்டம் நீக்கப்பட்டது.',deleteConfirm:'இந்தத் திட்டத்தையும் அதன் கோப்புகளையும் நீக்கவா?',demoDownload:'மாதிரித் திட்டத்திற்கு பதிவிறக்கக் கோப்பு இல்லை.',loading:'திட்டங்கள் ஏற்றப்படுகின்றன...',youAreLoggedIn:'உள்நுழைந்தவர்',adminRequired:'மின்னஞ்சல் சரிபார்க்கப்பட்டது. ஆனால் இந்தக் கணக்கு Admin அல்ல.',fileTooBig:'கோப்பு அளவு அதிகம்.',invalidFile:'இந்தக் கோப்பு வடிவம் அனுமதிக்கப்படவில்லை.',retry:'மீண்டும் முயற்சிக்கவும்.',noFile:'கோப்பு இல்லை',demoProjects:'பார்ப்பதற்கான மாதிரித் திட்டங்கள்',invalidName:'தவறான கோப்புப் பெயர்',projectNotReady:'திட்டக் கோப்பை திறக்க முடியவில்லை.',publishFailed:'திட்டத்தை வெளியிட முடியவில்லை. Firebase rules-ஐ சரிபார்க்கவும்.',removeFailed:'திட்டம் நீக்கப்படவில்லை. Firebase rules-ஐ சரிபார்க்கவும்.'
+  }
+};
+
+Object.assign(dictionary.en, {
+ galleryNav:'Gallery',galleryEyebrow:'TECH IN FRAMES',galleryTitle:'Project image gallery',galleryIntro:'Explore creations, circuits and smart solutions in one beautiful gallery.',
+ statProjects:'Projects / previews',statCategories:'Tech categories',statLanguages:'Languages',
+ allFilter:'All',contactEyebrow:'GET IN TOUCH',contactTitle:'Have an idea? Tell us.',contactDescription:'Send your ideas and questions with a verified CircuitX account.',contactName:'Your name',contactMessage:'Your message (minimum 10 characters)',contactSignIn:'Sign in and verify your email to send a message. Your account email is shared with the admin.',sendMessage:'Send message',sending:'Sending...',contactSent:'Your message has been sent to CircuitX.',
+ googleLogin:'Continue with Google',orContinue:'or continue with',googleFailed:'Google sign-in failed. Check popup permissions and Firebase configuration.',
+ loginForDownload:'Please sign in to download project files.',verifiedForDownload:'Verify your email before downloading files.',downloading:'Downloading file...',downloadReady:'Download started.',downloadFailed:'Could not download. Check Storage rules and CORS setup.',loginForContact:'Sign in and verify your email to send a message.',
+ inboxTitle:'Contact inbox',noMessages:'No messages yet.',markRead:'Mark read',messageRead:'Read',inboxError:'Could not load contact inbox.'
+});
+Object.assign(dictionary.ta, {
+ galleryNav:'படத்தொகுப்பு',galleryEyebrow:'தொழில்நுட்பப் படங்கள்',galleryTitle:'திட்டப் படத்தொகுப்பு',galleryIntro:'எங்கள் திட்டங்கள், மின்சுற்றுகள் மற்றும் ஸ்மார்ட் தொழில்நுட்பங்களைப் பாருங்கள்.',
+ statProjects:'திட்டங்கள் / மாதிரிகள்',statCategories:'தொழில்நுட்ப வகைகள்',statLanguages:'மொழிகள்',
+ allFilter:'அனைத்தும்',contactEyebrow:'தொடர்பு கொள்ளுங்கள்',contactTitle:'உங்கள் புதிய யோசனையை பகிருங்கள்',contactDescription:'சரிபார்க்கப்பட்ட CircuitX கணக்குடன் உங்கள் கேள்விகள், யோசனைகளை அனுப்புங்கள்.',contactName:'உங்கள் பெயர்',contactMessage:'உங்கள் தகவல் (குறைந்தது 10 எழுத்துகள்)',contactSignIn:'தகவல் அனுப்ப உள்நுழைந்து மின்னஞ்சலைச் சரிபார்க்கவும். உங்கள் கணக்கு மின்னஞ்சல் Admin-க்குத் தெரியும்.',sendMessage:'செய்தி அனுப்பு',sending:'அனுப்பப்படுகிறது...',contactSent:'உங்கள் செய்தி CircuitX-க்கு அனுப்பப்பட்டது.',
+ googleLogin:'Google மூலம் தொடருங்கள்',orContinue:'அல்லது இவ்வாறு தொடரவும்',googleFailed:'Google உள்நுழைவு தோல்வி. Popup மற்றும் Firebase அமைப்புகளைச் சரிபார்க்கவும்.',
+ loginForDownload:'திட்டக் கோப்புகளை பதிவிறக்க முதலில் உள்நுழையுங்கள்.',verifiedForDownload:'பதிவிறக்குவதற்கு மின்னஞ்சலைச் சரிபார்க்கவும்.',downloading:'கோப்பு பதிவிறக்கப்படுகிறது...',downloadReady:'பதிவிறக்கம் தொடங்கியது.',downloadFailed:'பதிவிறக்க முடியவில்லை. Storage Rules / CORS அமைப்பைச் சரிபார்க்கவும்.',loginForContact:'செய்தி அனுப்ப உள்நுழைந்து மின்னஞ்சலைச் சரிபார்க்கவும்.',
+ inboxTitle:'பெறப்பட்ட செய்திகள்',noMessages:'இன்னும் செய்திகள் வரவில்லை.',markRead:'படித்ததாகக் குறி',messageRead:'படிக்கப்பட்டது',inboxError:'செய்திகளைப் பெற முடியவில்லை.'
+});
+
+// Spark Free / Firestore-only version labels
+Object.assign(dictionary.en, {
+  coverFile: 'Optional cover image (max 2 MB, resized as a tiny Firestore thumbnail)',
+  codeFile: 'Arduino source file (optional, UTF-8 text, max 80 KB: .ino, .cpp, .h, .txt, .md, .json, .py)',
+  pasteCode: 'Or paste Arduino code (instead of selecting a file)',
+  fileReminder: 'Spark Free: your text source is private in Firestore. Only verified signed-in users can download; ZIP/PDF are not supported.',
+  coverLimit: 'Cover image too big. Choose an image below 2 MB; it will be compressed.',
+  codeLimit: 'Arduino code must be 80 KB or smaller (UTF-8 text).',
+  chooseFileOrPaste: 'Choose a code file OR paste code, not both.',
+  utf8Only: 'Only valid UTF-8 text source files are supported. No ZIP/PDF/binary.',
+  emptyCode: 'Code file is empty.',
+  downloadFailed: 'Download failed. Check email verification and Firestore Rules.',
+  publishFailed: 'Could not publish. Check Firestore Rules (Spark Free version).',
+  deleteConfirm: 'Delete this project and its private source code?',
+  uploading: 'Publishing to Firestore…'
+});
+Object.assign(dictionary.ta, {
+  coverFile: 'அட்டைப் படம் (விருப்பம்; அதிகபட்சம் 2 MB; சிறிய thumbnail-ஆக மாற்றப்படும்)',
+  codeFile: 'Arduino code கோப்பு (விருப்பம்; UTF-8 text, 80 KB வரை: .ino .cpp .h .txt .md .json .py)',
+  pasteCode: 'அல்லது Arduino code-ஐ இங்கே Paste செய்யுங்கள் (file-ஐத் தேர்வு செய்ய வேண்டாம்)',
+  fileReminder: 'Spark Free: Code Firestore-ல் பாதுகாக்கப்படும். verified login செய்தவருக்கே download. ZIP/PDF ஆதரவு இல்லை.',
+  coverLimit: 'படம் மிகப் பெரியது. 2 MB-க்கு உட்பட்ட படத்தைத் தேர்வு செய்யுங்கள்.',
+  codeLimit: 'Arduino code UTF-8 வடிவில் 80 KB-க்கு உட்பட்டதாக இருக்க வேண்டும்.',
+  chooseFileOrPaste: 'Code file அல்லது Paste Code, ஒன்றை மட்டும் பயன்படுத்துங்கள்.',
+  utf8Only: 'UTF-8 text source files மட்டுமே ஆதரவு. ZIP/PDF/binary இல்லை.',
+  emptyCode: 'Code காலியாக உள்ளது.',
+  downloadFailed: 'பதிவிறக்கம் முடியவில்லை. Verification மற்றும் Firestore Rules-ஐச் சரிபார்க்கவும்.',
+  publishFailed: 'Firestore Rules (Spark Free) சரியா என்று பார்க்கவும்.',
+  deleteConfirm: 'திட்டத்தையும் அதன் private code-யும் நீக்கவா?',
+  uploading: 'Firestore-க்கு வெளியிடப்படுகிறது…'
+});
+
+function translate(lang,key){return dictionary[lang]?.[key]??dictionary.en[key]??key}
+
+const EMBEDDED_ASSETS = {"farming": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgOTAwIDUyMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJmYXJtaW5nIHByb2plY3QgYXJ0d29yayI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjNjViNmY3Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOGFlNmMzIi8+PC9saW5lYXJHcmFkaWVudD4KPGxpbmVhckdyYWRpZW50IGlkPSJnbCIgeDE9IjAiIHkxPSIwIiB4Mj0iLjkiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSJ3aGl0ZSIgc3RvcC1vcGFjaXR5PSIuODYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IndoaXRlIiBzdG9wLW9wYWNpdHk9Ii4yOCIvPjwvbGluZWFyR3JhZGllbnQ+CjxmaWx0ZXIgaWQ9InNoYWRvdyIgeD0iLTMwJSIgeT0iLTQwJSIgd2lkdGg9IjE3MCUiIGhlaWdodD0iMjAwJSI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjE4IiBzdGREZXZpYXRpb249IjE2IiBmbG9vZC1jb2xvcj0iIzA3NTA4NyIgZmxvb2Qtb3BhY2l0eT0iLjIiLz48L2ZpbHRlcj48L2RlZnM+CjxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2JnKSIvPgo8Y2lyY2xlIGN4PSI3OTAiIGN5PSI0NCIgcj0iMjMwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjE1Ii8+PGNpcmNsZSBjeD0iODUiIGN5PSI0NDAiIHI9IjIxMCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii4xNiIvPgo8cGF0aCBkPSJNMCA0MDcgUTE2MCAzMjggMzY1IDQxNiBUOTAwIDQwNSBWNTIwSDBaIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjIzIi8+CjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIuNTIiIHN0cm9rZS13aWR0aD0iMyI+PHBhdGggZD0iTTI1IDExNSBIMjQwIEwyODUgMTYwIEgzNDAiLz48cGF0aCBkPSJNNjEyIDEwNiBINzUwIEw4MDIgMTU4IEg4NzYiLz48Y2lyY2xlIGN4PSIzNDAiIGN5PSIxNjAiIHI9IjgiLz48Y2lyY2xlIGN4PSI4MDIiIGN5PSIxNTgiIHI9IjgiLz48L2c+CjxnIGZpbHRlcj0idXJsKCNzaGFkb3cpIj48cmVjdCB4PSI5NiIgeT0iMTEwIiB3aWR0aD0iNzEwIiBoZWlnaHQ9IjMyNSIgcng9IjMzIiBmaWxsPSJ1cmwoI2dsKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2Utb3BhY2l0eT0iLjc1Ii8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjc1IDE4OCkiPjxwYXRoIGQ9Ik0wIDE3OCBMMTUwIDAgTDMxMCAxNzgiIGZpbGw9IiNjYWVmZjkiIHN0cm9rZT0iIzJhOWFjYSIgc3Ryb2tlLXdpZHRoPSIxMSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxyZWN0IHg9IjAiIHk9IjE3OCIgd2lkdGg9IjMxMCIgaGVpZ2h0PSIxNSIgcng9IjciIGZpbGw9IiMyMjg5YjkiLz48cGF0aCBkPSJNNzUgMTc4IEwxNTAgMCBNMjM1IDE3OCBMMTUwIDAgTTE1MCAwIFYxNzgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzQ4YWVjYSIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHJlY3QgeD0iMzQiIHk9IjEzOCIgd2lkdGg9IjI0MiIgaGVpZ2h0PSI0MyIgZmlsbD0iIzZhYzc4YyIvPjxnIGZpbGw9IiMxY2JhNzAiIHN0cm9rZT0iIzEyN2Y1OCIgc3Ryb2tlLXdpZHRoPSI0Ij48cGF0aCBkPSJNOTAgMTYyVjExMk05MCAxMzVRNDMgMTE5IDU4IDk0UTkxIDk4IDkwIDEzNU05MCAxMzdRMTQxIDEwOSAxMzIgODlROTQgOTUgOTAgMTM3Ii8+PHBhdGggZD0iTTIxMSAxNjNWMTA0TTIxMSAxMjdRMTYzIDEwNyAxNzMgODJRMjExIDkwIDIxMSAxMjdNMjExIDEzMFEyNjAgMTEwIDI0OCA4MVEyMDkgOTAgMjExIDEzMCIvPjwvZz48L2c+PC9nPgo8cmVjdCB4PSIxMzIiIHk9IjE0MiIgcng9IjE0IiB3aWR0aD0iMTI4IiBoZWlnaHQ9IjM5IiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIuNiIvPgo8dGV4dCB4PSIxNTAiIHk9IjE2OCIgZmlsbD0iIzE1NTU4NyIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LXNpemU9IjE3Ij5DSVJDVUlUWDwvdGV4dD4KPGcgZmlsbD0iIzFmOTVkYSI+PGNpcmNsZSBjeD0iNzQwIiBjeT0iMTYxIiByPSI4Ii8+PGNpcmNsZSBjeD0iNzE0IiBjeT0iMTYxIiByPSI4IiBmaWxsLW9wYWNpdHk9Ii41Ii8+PGNpcmNsZSBjeD0iNjg4IiBjeT0iMTYxIiByPSI4IiBmaWxsLW9wYWNpdHk9Ii4yNSIvPjwvZz4KPC9zdmc+", "home": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgOTAwIDUyMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJob21lIHByb2plY3QgYXJ0d29yayI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjOWNjYWZmIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjN2JjOGY5Ii8+PC9saW5lYXJHcmFkaWVudD4KPGxpbmVhckdyYWRpZW50IGlkPSJnbCIgeDE9IjAiIHkxPSIwIiB4Mj0iLjkiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSJ3aGl0ZSIgc3RvcC1vcGFjaXR5PSIuODYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IndoaXRlIiBzdG9wLW9wYWNpdHk9Ii4yOCIvPjwvbGluZWFyR3JhZGllbnQ+CjxmaWx0ZXIgaWQ9InNoYWRvdyIgeD0iLTMwJSIgeT0iLTQwJSIgd2lkdGg9IjE3MCUiIGhlaWdodD0iMjAwJSI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjE4IiBzdGREZXZpYXRpb249IjE2IiBmbG9vZC1jb2xvcj0iIzA3NTA4NyIgZmxvb2Qtb3BhY2l0eT0iLjIiLz48L2ZpbHRlcj48L2RlZnM+CjxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2JnKSIvPgo8Y2lyY2xlIGN4PSI3OTAiIGN5PSI0NCIgcj0iMjMwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjE1Ii8+PGNpcmNsZSBjeD0iODUiIGN5PSI0NDAiIHI9IjIxMCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii4xNiIvPgo8cGF0aCBkPSJNMCA0MDcgUTE2MCAzMjggMzY1IDQxNiBUOTAwIDQwNSBWNTIwSDBaIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjIzIi8+CjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIuNTIiIHN0cm9rZS13aWR0aD0iMyI+PHBhdGggZD0iTTI1IDExNSBIMjQwIEwyODUgMTYwIEgzNDAiLz48cGF0aCBkPSJNNjEyIDEwNiBINzUwIEw4MDIgMTU4IEg4NzYiLz48Y2lyY2xlIGN4PSIzNDAiIGN5PSIxNjAiIHI9IjgiLz48Y2lyY2xlIGN4PSI4MDIiIGN5PSIxNTgiIHI9IjgiLz48L2c+CjxnIGZpbHRlcj0idXJsKCNzaGFkb3cpIj48cmVjdCB4PSI5NiIgeT0iMTEwIiB3aWR0aD0iNzEwIiBoZWlnaHQ9IjMyNSIgcng9IjMzIiBmaWxsPSJ1cmwoI2dsKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2Utb3BhY2l0eT0iLjc1Ii8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjc4IDIwMSkiPjxwYXRoIGQ9Ik0wIDkzTDE1NCAtMTFMMzA1IDkzIiBmaWxsPSIjMzU4YmNjIiBzdHJva2U9IiMxNzZkYTkiIHN0cm9rZS13aWR0aD0iMTIiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cmVjdCB4PSIzOCIgeT0iODgiIHdpZHRoPSIyMzUiIGhlaWdodD0iMTQwIiByeD0iOCIgZmlsbD0iI2VlZmFmZiIvPjxyZWN0IHg9IjEyNiIgeT0iMTMyIiB3aWR0aD0iNjUiIGhlaWdodD0iOTYiIHJ4PSI3IiBmaWxsPSIjMmQ5NWRiIi8+PHJlY3QgeD0iNjIiIHk9IjEyMCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjU1IiByeD0iNSIgZmlsbD0iIzg3ZGJmOCIvPjxyZWN0IHg9IjIxMSIgeT0iMTIwIiB3aWR0aD0iNDUiIGhlaWdodD0iNTUiIHJ4PSI1IiBmaWxsPSIjODdkYmY4Ii8+PHBhdGggZD0iTTE1MCA1MHEzMCAtMjggNjAgME0xNjEgNjJxMjAgLTE4IDQwIDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzA4N2NjMiIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSIxODAiIGN5PSI3MCIgcj0iNyIgZmlsbD0iIzA4N2NjMiIvPjwvZz48L2c+CjxyZWN0IHg9IjEzMiIgeT0iMTQyIiByeD0iMTQiIHdpZHRoPSIxMjgiIGhlaWdodD0iMzkiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9Ii42Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTY4IiBmaWxsPSIjMTU1NTg3IiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZvbnQtc2l6ZT0iMTciPkNJUkNVSVRYPC90ZXh0Pgo8ZyBmaWxsPSIjMWY5NWRhIj48Y2lyY2xlIGN4PSI3NDAiIGN5PSIxNjEiIHI9IjgiLz48Y2lyY2xlIGN4PSI3MTQiIGN5PSIxNjEiIHI9IjgiIGZpbGwtb3BhY2l0eT0iLjUiLz48Y2lyY2xlIGN4PSI2ODgiIGN5PSIxNjEiIHI9IjgiIGZpbGwtb3BhY2l0eT0iLjI1Ii8+PC9nPgo8L3N2Zz4=", "iot": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgOTAwIDUyMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJpb3QgcHJvamVjdCBhcnR3b3JrIj4KPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiM3NmM1ZjMiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNhNmRkZmYiLz48L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9ImdsIiB4MT0iMCIgeTE9IjAiIHgyPSIuOSIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IndoaXRlIiBzdG9wLW9wYWNpdHk9Ii44NiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0id2hpdGUiIHN0b3Atb3BhY2l0eT0iLjI4Ii8+PC9saW5lYXJHcmFkaWVudD4KPGZpbHRlciBpZD0ic2hhZG93IiB4PSItMzAlIiB5PSItNDAlIiB3aWR0aD0iMTcwJSIgaGVpZ2h0PSIyMDAlIj48ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMTgiIHN0ZERldmlhdGlvbj0iMTYiIGZsb29kLWNvbG9yPSIjMDc1MDg3IiBmbG9vZC1vcGFjaXR5PSIuMiIvPjwvZmlsdGVyPjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjkwMCIgaGVpZ2h0PSI1MjAiIGZpbGw9InVybCgjYmcpIi8+CjxjaXJjbGUgY3g9Ijc5MCIgY3k9IjQ0IiByPSIyMzAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuMTUiLz48Y2lyY2xlIGN4PSI4NSIgY3k9IjQ0MCIgcj0iMjEwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjE2Ii8+CjxwYXRoIGQ9Ik0wIDQwNyBRMTYwIDMyOCAzNjUgNDE2IFQ5MDAgNDA1IFY1MjBIMFoiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuMjMiLz4KPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLW9wYWNpdHk9Ii41MiIgc3Ryb2tlLXdpZHRoPSIzIj48cGF0aCBkPSJNMjUgMTE1IEgyNDAgTDI4NSAxNjAgSDM0MCIvPjxwYXRoIGQ9Ik02MTIgMTA2IEg3NTAgTDgwMiAxNTggSDg3NiIvPjxjaXJjbGUgY3g9IjM0MCIgY3k9IjE2MCIgcj0iOCIvPjxjaXJjbGUgY3g9IjgwMiIgY3k9IjE1OCIgcj0iOCIvPjwvZz4KPGcgZmlsdGVyPSJ1cmwoI3NoYWRvdykiPjxyZWN0IHg9Ijk2IiB5PSIxMTAiIHdpZHRoPSI3MTAiIGhlaWdodD0iMzI1IiByeD0iMzMiIGZpbGw9InVybCgjZ2wpIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1vcGFjaXR5PSIuNzUiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNjIgMTg4KSI+PHJlY3QgeD0iMCIgeT0iNTgiIHdpZHRoPSIzNTYiIGhlaWdodD0iMTcyIiByeD0iMjUiIGZpbGw9IiMyZjk0ZDEiIHN0cm9rZT0iI2M5ZWZmZiIgc3Ryb2tlLXdpZHRoPSI5Ii8+PHJlY3QgeD0iMjciIHk9Ijg1IiB3aWR0aD0iMzA0IiBoZWlnaHQ9IjExNSIgcng9IjEyIiBmaWxsPSIjZTNmOGZmIi8+PHBhdGggZD0iTTUxIDE3MEwxMTIgMTMwTDE2NyAxNTFMMjIxIDEwM0wyOTggMTE5IiBzdHJva2U9IiMyZWFjYmEiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPjxjaXJjbGUgY3g9IjExMiIgY3k9IjEzMCIgcj0iOCIgZmlsbD0iIzA4N2NjMiIvPjxjaXJjbGUgY3g9IjIyMSIgY3k9IjEwMyIgcj0iOCIgZmlsbD0iIzA4N2NjMiIvPjxwYXRoIGQ9Ik0xNDUgNjJWOU0xNzggNjJWLTRNMjExIDYyVjkiIHN0cm9rZT0iIzA2N2NjMCIgc3Ryb2tlLXdpZHRoPSIxMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGNpcmNsZSBjeD0iMTc4IiBjeT0iLTE3IiByPSIxMCIgZmlsbD0iIzE4YmVkMCIvPjwvZz48L2c+CjxyZWN0IHg9IjEzMiIgeT0iMTQyIiByeD0iMTQiIHdpZHRoPSIxMjgiIGhlaWdodD0iMzkiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9Ii42Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTY4IiBmaWxsPSIjMTU1NTg3IiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZvbnQtc2l6ZT0iMTciPkNJUkNVSVRYPC90ZXh0Pgo8ZyBmaWxsPSIjMWY5NWRhIj48Y2lyY2xlIGN4PSI3NDAiIGN5PSIxNjEiIHI9IjgiLz48Y2lyY2xlIGN4PSI3MTQiIGN5PSIxNjEiIHI9IjgiIGZpbGwtb3BhY2l0eT0iLjUiLz48Y2lyY2xlIGN4PSI2ODgiIGN5PSIxNjEiIHI9IjgiIGZpbGwtb3BhY2l0eT0iLjI1Ii8+PC9nPgo8L3N2Zz4=", "robotics": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgOTAwIDUyMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJyb2JvdGljcyBwcm9qZWN0IGFydHdvcmsiPgo8ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2IzYzdmYSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzk5ZDdmZiIvPjwvbGluZWFyR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ2wiIHgxPSIwIiB5MT0iMCIgeDI9Ii45IiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0id2hpdGUiIHN0b3Atb3BhY2l0eT0iLjg2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSJ3aGl0ZSIgc3RvcC1vcGFjaXR5PSIuMjgiLz48L2xpbmVhckdyYWRpZW50Pgo8ZmlsdGVyIGlkPSJzaGFkb3ciIHg9Ii0zMCUiIHk9Ii00MCUiIHdpZHRoPSIxNzAlIiBoZWlnaHQ9IjIwMCUiPjxmZURyb3BTaGFkb3cgZHg9IjAiIGR5PSIxOCIgc3RkRGV2aWF0aW9uPSIxNiIgZmxvb2QtY29sb3I9IiMwNzUwODciIGZsb29kLW9wYWNpdHk9Ii4yIi8+PC9maWx0ZXI+PC9kZWZzPgo8cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUyMCIgZmlsbD0idXJsKCNiZykiLz4KPGNpcmNsZSBjeD0iNzkwIiBjeT0iNDQiIHI9IjIzMCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii4xNSIvPjxjaXJjbGUgY3g9Ijg1IiBjeT0iNDQwIiByPSIyMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuMTYiLz4KPHBhdGggZD0iTTAgNDA3IFExNjAgMzI4IDM2NSA0MTYgVDkwMCA0MDUgVjUyMEgwWiIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii4yMyIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utb3BhY2l0eT0iLjUyIiBzdHJva2Utd2lkdGg9IjMiPjxwYXRoIGQ9Ik0yNSAxMTUgSDI0MCBMMjg1IDE2MCBIMzQwIi8+PHBhdGggZD0iTTYxMiAxMDYgSDc1MCBMODAyIDE1OCBIODc2Ii8+PGNpcmNsZSBjeD0iMzQwIiBjeT0iMTYwIiByPSI4Ii8+PGNpcmNsZSBjeD0iODAyIiBjeT0iMTU4IiByPSI4Ii8+PC9nPgo8ZyBmaWx0ZXI9InVybCgjc2hhZG93KSI+PHJlY3QgeD0iOTYiIHk9IjExMCIgd2lkdGg9IjcxMCIgaGVpZ2h0PSIzMjUiIHJ4PSIzMyIgZmlsbD0idXJsKCNnbCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLW9wYWNpdHk9Ii43NSIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMwMSAxODcpIj48cGF0aCBkPSJNMTQ4IDE1Vi0yMCIgc3Ryb2tlPSIjM2M2OWJhIiBzdHJva2Utd2lkdGg9IjExIi8+PGNpcmNsZSBjeD0iMTQ4IiBjeT0iLTI3IiByPSIxNCIgZmlsbD0iIzM1YmFmMSIvPjxyZWN0IHg9IjAiIHk9IjIyIiB3aWR0aD0iMjk4IiBoZWlnaHQ9IjE5MyIgcng9IjQ2IiBmaWxsPSIjZWFmYWZmIiBzdHJva2U9IiM1MjliY2YiIHN0cm9rZS13aWR0aD0iMTAiLz48cmVjdCB4PSIzNSIgeT0iNzUiIHdpZHRoPSIyMjgiIGhlaWdodD0iODAiIHJ4PSIyNCIgZmlsbD0iIzQ3OGJjYSIvPjxjaXJjbGUgY3g9IjEwMSIgY3k9IjExNiIgcj0iMjMiIGZpbGw9IiM5YmVhZmYiLz48Y2lyY2xlIGN4PSIxOTUiIGN5PSIxMTYiIHI9IjIzIiBmaWxsPSIjOWJlYWZmIi8+PHBhdGggZD0iTTExMiAxODRIMTg1IiBzdHJva2U9IiM0N2E5ZDIiIHN0cm9rZS13aWR0aD0iMTEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0wIDEwMmgtMzVNMjk4IDEwMmgzNSIgc3Ryb2tlPSIjMzc2ZmI4IiBzdHJva2Utd2lkdGg9IjE3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L2c+PC9nPgo8cmVjdCB4PSIxMzIiIHk9IjE0MiIgcng9IjE0IiB3aWR0aD0iMTI4IiBoZWlnaHQ9IjM5IiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIuNiIvPgo8dGV4dCB4PSIxNTAiIHk9IjE2OCIgZmlsbD0iIzE1NTU4NyIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LXNpemU9IjE3Ij5DSVJDVUlUWDwvdGV4dD4KPGcgZmlsbD0iIzFmOTVkYSI+PGNpcmNsZSBjeD0iNzQwIiBjeT0iMTYxIiByPSI4Ii8+PGNpcmNsZSBjeD0iNzE0IiBjeT0iMTYxIiByPSI4IiBmaWxsLW9wYWNpdHk9Ii41Ii8+PGNpcmNsZSBjeD0iNjg4IiBjeT0iMTYxIiByPSI4IiBmaWxsLW9wYWNpdHk9Ii4yNSIvPjwvZz4KPC9zdmc+", "electronics": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgOTAwIDUyMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJlbGVjdHJvbmljcyBwcm9qZWN0IGFydHdvcmsiPgo8ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iIzg1ZDhlZCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzkxYjlmYiIvPjwvbGluZWFyR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ2wiIHgxPSIwIiB5MT0iMCIgeDI9Ii45IiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0id2hpdGUiIHN0b3Atb3BhY2l0eT0iLjg2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSJ3aGl0ZSIgc3RvcC1vcGFjaXR5PSIuMjgiLz48L2xpbmVhckdyYWRpZW50Pgo8ZmlsdGVyIGlkPSJzaGFkb3ciIHg9Ii0zMCUiIHk9Ii00MCUiIHdpZHRoPSIxNzAlIiBoZWlnaHQ9IjIwMCUiPjxmZURyb3BTaGFkb3cgZHg9IjAiIGR5PSIxOCIgc3RkRGV2aWF0aW9uPSIxNiIgZmxvb2QtY29sb3I9IiMwNzUwODciIGZsb29kLW9wYWNpdHk9Ii4yIi8+PC9maWx0ZXI+PC9kZWZzPgo8cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUyMCIgZmlsbD0idXJsKCNiZykiLz4KPGNpcmNsZSBjeD0iNzkwIiBjeT0iNDQiIHI9IjIzMCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii4xNSIvPjxjaXJjbGUgY3g9Ijg1IiBjeT0iNDQwIiByPSIyMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuMTYiLz4KPHBhdGggZD0iTTAgNDA3IFExNjAgMzI4IDM2NSA0MTYgVDkwMCA0MDUgVjUyMEgwWiIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii4yMyIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utb3BhY2l0eT0iLjUyIiBzdHJva2Utd2lkdGg9IjMiPjxwYXRoIGQ9Ik0yNSAxMTUgSDI0MCBMMjg1IDE2MCBIMzQwIi8+PHBhdGggZD0iTTYxMiAxMDYgSDc1MCBMODAyIDE1OCBIODc2Ii8+PGNpcmNsZSBjeD0iMzQwIiBjeT0iMTYwIiByPSI4Ii8+PGNpcmNsZSBjeD0iODAyIiBjeT0iMTU4IiByPSI4Ii8+PC9nPgo8ZyBmaWx0ZXI9InVybCgjc2hhZG93KSI+PHJlY3QgeD0iOTYiIHk9IjExMCIgd2lkdGg9IjcxMCIgaGVpZ2h0PSIzMjUiIHJ4PSIzMyIgZmlsbD0idXJsKCNnbCkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLW9wYWNpdHk9Ii43NSIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI5MyAyMDMpIj48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMjk4IiBoZWlnaHQ9IjE5MyIgcng9IjIyIiBmaWxsPSIjMTc2OGE1IiBzdHJva2U9IiNjNWVhZmYiIHN0cm9rZS13aWR0aD0iOSIvPjxnIHN0cm9rZT0iIzZjZTRkMCIgc3Ryb2tlLXdpZHRoPSI4IiBmaWxsPSJub25lIj48cGF0aCBkPSJNMjIgNTRIOTBMMTI3IDg3SDE4OCIvPjxwYXRoIGQ9Ik0yMCAxNDRIOTVMMTI5IDExMUgyMTYiLz48cGF0aCBkPSJNMjA1IDQySDI1NVY4NCIvPjwvZz48cmVjdCB4PSI5NiIgeT0iMzUiIHdpZHRoPSIxMDYiIGhlaWdodD0iMTE5IiByeD0iMTUiIGZpbGw9IiMwYTM4NWYiIHN0cm9rZT0iIzhkZTVmMiIgc3Ryb2tlLXdpZHRoPSI5Ii8+PGcgZmlsbD0iI2E4ZWVlYyI+PHJlY3QgeD0iMTEyIiB5PSIxNyIgd2lkdGg9IjEwIiBoZWlnaHQ9IjE4IiByeD0iMyIvPjxyZWN0IHg9IjE1NyIgeT0iMTciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxOCIgcng9IjMiLz48cmVjdCB4PSIxOTIiIHk9IjE3IiB3aWR0aD0iMTAiIGhlaWdodD0iMTgiIHJ4PSIzIi8+PC9nPjxwYXRoIGQ9Ik0xNDggNjdsLTIzIDQxaDIybC04IDI0IDM1LTUwaC0yMmw5LTE1IiBmaWxsPSIjNmZlN2MyIi8+PC9nPjwvZz4KPHJlY3QgeD0iMTMyIiB5PSIxNDIiIHJ4PSIxNCIgd2lkdGg9IjEyOCIgaGVpZ2h0PSIzOSIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iLjYiLz4KPHRleHQgeD0iMTUwIiB5PSIxNjgiIGZpbGw9IiMxNTU1ODciIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1zaXplPSIxNyI+Q0lSQ1VJVFg8L3RleHQ+CjxnIGZpbGw9IiMxZjk1ZGEiPjxjaXJjbGUgY3g9Ijc0MCIgY3k9IjE2MSIgcj0iOCIvPjxjaXJjbGUgY3g9IjcxNCIgY3k9IjE2MSIgcj0iOCIgZmlsbC1vcGFjaXR5PSIuNSIvPjxjaXJjbGUgY3g9IjY4OCIgY3k9IjE2MSIgcj0iOCIgZmlsbC1vcGFjaXR5PSIuMjUiLz48L2c+Cjwvc3ZnPg=="};
+
+
+const $ = id => document.getElementById(id);
+const ADMIN_EMAIL = 'ruheeshruheesh5@gmail.com';
+const CATEGORIES = ['all', 'farming', 'home', 'iot', 'robotics', 'electronics'];
+const CATEGORY = { farming: 'catFarming', home: 'catHome', iot: 'catIot', robotics: 'catRobotics', electronics: 'catElectronics' };
+const LEVEL = { beginner: 'beginner', intermediate: 'intermediate', advanced: 'advanced' };
+const ART = { farming: ['🌱', 'green'], home: ['🏡', 'blue'], iot: ['📡', 'sky'], robotics: ['🤖', 'purple'], electronics: ['⚡', 'gold'] };
+const state = {
+  lang: localStorage.getItem('cx_language') === 'ta' ? 'ta' : 'en',
+  theme: localStorage.getItem('cx_theme') === 'dark' ? 'dark' : 'light',
+  category: 'all', mode: 'login', user: null, isAdmin: false,
+  projects: [...sampleProjects], live: false, fb: null, toastTimer: null
+};
+const tr = key => translate(state.lang, key);
+const catLabel = c => tr(CATEGORY[c] || 'catIot');
+const levLabel = l => tr(LEVEL[l] || 'beginner');
+const title = p => state.lang === 'ta' && p.titleTa?.trim() ? p.titleTa : (p.titleEn || 'Project');
+const description = p => state.lang === 'ta' && p.descriptionTa?.trim() ? p.descriptionTa : (p.descriptionEn || '');
+const el = (tag, className = '', value) => { const node = document.createElement(tag); node.className = className; if(value !== undefined) node.textContent = value; return node; };
+const artPath = p => EMBEDDED_ASSETS[CATEGORY[p.category] ? p.category : 'iot'];
+
+function toast(message, ms = 4500) {
+  const node = $('toast'); node.textContent = message; node.hidden = false;
+  clearTimeout(state.toastTimer); state.toastTimer = setTimeout(() => { node.hidden = true; }, ms);
+}
+// Always leave a readable message in the login window, not only a short toast.
+function setAuthStatus(message = '', isError = true) {
+  const label = $('authStatus');
+  if (!label) return;
+  label.textContent = message;
+  label.hidden = !message;
+  label.dataset.error = String(isError);
+}
+function setConnectionStatus(message = '', { retry = false } = {}) {
+  const label = $('firebaseStatus');
+  if (label) { label.textContent = message; label.hidden = !message; }
+  const button = $('retryFirebaseBtn');
+  if (button) button.hidden = !retry;
+  if (message) console.warn('[CircuitX Firebase]', message);
+}
+function localDomainHint() {
+  const host = location.hostname;
+  if (host === '127.0.0.1') return 'Use http://localhost:5500/index.html and add localhost in Firebase Authentication → Settings → Authorized domains.';
+  if (host === 'localhost') return 'Check that localhost is added in Firebase Authentication → Settings → Authorized domains.';
+  return `Check that ${host} is added in Firebase Authentication → Settings → Authorized domains.`;
+}
+function readableError(error, label = 'Firebase error') {
+  const code = error?.code || error?.name || 'unknown';
+  const message = error?.message || String(error);
+  return `${label} [${code}]: ${message}`;
+}
+function reportGoogleError(error) {
+  console.error('[CircuitX Google Sign-In]', error);
+  const code = String(error?.code || '');
+  let hint = localDomainHint();
+  if (code === 'auth/popup-blocked') hint = 'Chrome → Site settings → allow Pop-ups and redirects for this site; then try again.';
+  else if (code === 'auth/popup-closed-by-user') hint = 'Google sign-in window closed before completion. Allow popups, avoid opening another login window, and retry.';
+  else if (code === 'auth/operation-not-allowed') hint = 'Firebase Console → Authentication → Sign-in method → Google → Enable → Save.';
+  else if (code === 'auth/network-request-failed') hint = 'Check internet and whether www.gstatic.com and Firebase are reachable.';
+  else if (code === 'auth/invalid-api-key') hint = 'Check Firebase Project settings → Your apps → Config.';
+  const detail = `${readableError(error, 'Google login failed')}\n${hint}`;
+  setAuthStatus(detail);
+  toast(errMessage(error, 'googleFailed'), 10000);
+}
+function openDialog(id) { if (!$(id).open) $(id).showModal(); }
+function closeDialog(id) { if ($(id).open) $(id).close(); }
+function errMessage(err, fallback = 'networkError') {
+  const code = String(err?.code || '');
+  const messages = {
+    'auth/operation-not-allowed': ['Enable Google provider in Firebase Authentication.', 'Firebase Authentication-ல் Google provider-ஐ Enable செய்யுங்கள்.'],
+    'auth/network-request-failed': ['Network error: check internet and Firebase SDK access.', 'இணையம் மற்றும் Firebase SDK இணைப்பைச் சரிபார்க்கவும்.'],
+    'auth/invalid-api-key': ['Invalid Firebase API key. Check Firebase Config.', 'Firebase API key சரியில்லை. Config-ஐச் சரிபார்க்கவும்.'],
+    'auth/email-already-in-use': ['This email is already registered.', 'இந்த மின்னஞ்சல் ஏற்கனவே பதிவு செய்யப்பட்டுள்ளது.'],
+    'auth/invalid-email': ['Invalid email address.', 'மின்னஞ்சல் முகவரி சரியில்லை.'],
+    'auth/weak-password': ['Password must be at least 6 characters.', 'குறைந்தது 6 எழுத்துகள் கொண்ட கடவுச்சொல் தேவை.'],
+    'auth/invalid-credential': ['Incorrect login details.', 'உள்நுழைவு தகவல் தவறு.'],
+    'auth/too-many-requests': ['Too many attempts. Try later.', 'பல முயற்சிகள். சிறிது நேரம் கழித்து முயற்சிக்கவும்.'],
+    'auth/unauthorized-domain': ['Add this domain to Firebase Authorized domains.', 'Firebase Authorized domains-ல் இந்த இணையதளத்தைச் சேர்க்கவும்.'],
+    'auth/popup-blocked': ['Please allow the Google login popup.', 'Google உள்நுழைவு Popup-ஐ அனுமதிக்கவும்.'],
+    'auth/popup-closed-by-user': ['Google popup was closed.', 'Google Popup மூடப்பட்டது.'],
+    'permission-denied': ['Permission denied. Check Firebase security rules.', 'அனுமதி இல்லை. Firebase பாதுகாப்பு விதிகளைச் சரிபார்க்கவும்.']
+  };
+  if (messages[code]) return messages[code][state.lang === 'ta' ? 1 : 0];
+  if (code.includes('permission-denied') || code.includes('unauthorized')) return messages['permission-denied'][state.lang === 'ta' ? 1 : 0];
+  console.error('CircuitX error:', err);
+  return tr(fallback);
+}
+function renderTranslations() {
+  document.documentElement.lang = state.lang;
+  document.querySelectorAll('[data-i18n]').forEach(node => {
+    const key = node.dataset.i18n;
+    // Only the authored hero title in this trusted dictionary contains HTML markup.
+    if (key === 'heroTitle') node.innerHTML = tr(key);
+    else node.textContent = tr(key);
+  });
+  document.querySelectorAll('[data-placeholder]').forEach(node => { node.placeholder = tr(node.dataset.placeholder); });
+  $('langBtn').textContent = state.lang === 'en' ? 'தமிழ்' : 'EN';
+  $('authTitle').textContent = tr(state.mode === 'login' ? 'welcomeBack' : 'register');
+  $('authHelp').textContent = tr(state.mode === 'login' ? 'authHelp' : 'authHelpRegister');
+  $('authSubmit').textContent = tr(state.mode === 'login' ? 'login' : 'register');
+  $('forgotBtn').hidden = state.mode !== 'login';
+  $('authBtn').textContent = tr(state.user ? 'logout' : 'login');
+  renderFilterButtons(); renderProjects(); renderGallery();
+  if (state.isAdmin) { renderAdminList(); renderInbox(); }
+}
+function applyTheme() {
+  document.body.classList.toggle('dark', state.theme === 'dark');
+  $('themeBtn').textContent = state.theme === 'dark' ? '☀' : '☾';
+}
+function switchAuthMode(mode) {
+  state.mode = mode;
+  $('loginTab').classList.toggle('active', mode === 'login');
+  $('registerTab').classList.toggle('active', mode === 'register');
+  $('passwordInput').autocomplete = mode === 'login' ? 'current-password' : 'new-password';
+  $('authTitle').textContent = tr(mode === 'login' ? 'welcomeBack' : 'register');
+  $('authHelp').textContent = tr(mode === 'login' ? 'authHelp' : 'authHelpRegister');
+  $('authSubmit').textContent = tr(mode === 'login' ? 'login' : 'register');
+  $('forgotBtn').hidden = mode !== 'login';
+}
+function renderFilterButtons() {
+  const wrap = $('filterButtons'); wrap.replaceChildren();
+  for (const c of CATEGORIES) {
+    const button = el('button', 'filter-pill', c === 'all' ? tr('allFilter') : catLabel(c));
+    button.type = 'button'; button.dataset.category = c;
+    button.setAttribute('aria-pressed', String(state.category === c));
+    button.addEventListener('click', () => { state.category = c; renderFilterButtons(); renderProjects(); });
+    wrap.append(button);
+  }
+}
+let revealObserver;
+function setupReveals() {
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.body.classList.add('motion-ready');
+  revealObserver = new IntersectionObserver(entries => {
+    for (const entry of entries) if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible'); revealObserver.unobserve(entry.target);
+    }
+  }, { threshold: 0.10, rootMargin: '0px 0px 42px 0px' });
+  observeReveals(document);
+}
+function observeReveals(root) {
+  if (!revealObserver) return;
+  const nodes = [...root.querySelectorAll('.reveal')];
+  if (root.classList?.contains('reveal')) nodes.unshift(root);
+  nodes.forEach(node => revealObserver.observe(node));
+}
+function counters() {
+  const categories = new Set(state.projects.map(p => p.category));
+  const numbers = { projectStat: state.projects.length, categoryStat: categories.size, languageStat: 2 };
+  for (const [id, value] of Object.entries(numbers)) {
+    const node = $(id); const last = Number(node.dataset.current || 0);
+    node.dataset.current = value;
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced || !('IntersectionObserver' in window)) { node.textContent = value; continue; }
+    const run = () => {
+      const start = performance.now();
+      const frame = now => {
+        const f = Math.min(1, (now - start) / 850); const ease = 1 - Math.pow(1 - f, 3);
+        node.textContent = String(Math.round(last + (value - last) * ease));
+        if (f < 1) requestAnimationFrame(frame);
+      };
+      requestAnimationFrame(frame);
+    };
+    if (node.dataset.seen === 'true') run();
+    else {
+      const observer = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) { node.dataset.seen = 'true'; observer.disconnect(); run(); }
+      }, { threshold: 0.25 });
+      observer.observe(node);
+    }
+  }
+}
+function renderProjects() {
+  const search = $('searchInput').value.trim().toLocaleLowerCase();
+  const level = $('levelFilter').value;
+  const filtered = state.projects.filter(p => {
+    const words = [p.titleEn, p.titleTa, p.descriptionEn, p.descriptionTa, ...(p.tags || []), catLabel(p.category), p.category].filter(Boolean).join(' ').toLocaleLowerCase();
+    return (state.category === 'all' || p.category === state.category)
+      && (level === 'all' || p.level === level) && (!search || words.includes(search));
+  });
+  $('resultsCount').textContent = `${filtered.length} ${tr('results')}`;
+  $('demoNotice').hidden = state.live;
+  $('emptyResults').hidden = filtered.length > 0;
+  const grid = $('projectsGrid'); grid.replaceChildren();
+  filtered.forEach(p => grid.append(makeProjectCard(p)));
+  observeReveals(grid);
+}
+function makeProjectCard(p) {
+  const card = el('article', 'project-card glass-shell reveal');
+  const art = el('div', 'project-art');
+  const img = el('img'); img.src = p.coverDataUrl || artPath(p); img.alt = title(p); img.loading = 'lazy'; art.append(img);
+  const body = el('div', 'project-card-body'), meta = el('div', 'project-meta');
+  meta.append(el('span', 'meta-chip', catLabel(p.category)), el('span', 'meta-chip dim', levLabel(p.level)));
+  if (p.demo) meta.append(el('span', 'meta-chip dim', tr('demoBadge')));
+  const heading = el('h3', '', title(p)), desc = el('p', '', description(p));
+  const bottom = el('div', 'card-bottom');
+  const view = el('button', 'text-btn', tr('viewProject') + ' ↗'); view.type = 'button'; view.addEventListener('click', () => openProject(p));
+  bottom.append(view);
+  if (p.hasCode === true) {
+    const download = el('button', 'download-small', '⬇ ' + tr('downloadCode').replace(/↗/g, ''));
+    download.type = 'button'; download.addEventListener('click', () => downloadProject(p, download)); bottom.append(download);
+  } else bottom.append(el('span', 'tiny-tags', (p.tags || []).slice(0, 2).join(' · ')));
+  body.append(meta, heading, desc, bottom); card.append(art, body); return card;
+}
+function renderGallery() {
+  const wrap = $('galleryGrid'); wrap.replaceChildren();
+  state.projects.slice(0, 6).forEach(p => {
+    const tile = el('button', 'gallery-tile reveal'); tile.type = 'button'; tile.setAttribute('aria-label', `${tr('viewProject')}: ${title(p)}`);
+    const img = el('img'); img.src = p.coverDataUrl || artPath(p); img.alt = title(p); img.loading = 'lazy';
+    const caption = el('span', 'gallery-caption');
+    caption.append(el('strong', '', title(p)), el('small', '', catLabel(p.category)));
+    tile.append(img, caption); tile.addEventListener('click', () => openProject(p)); wrap.append(tile);
+  });
+  observeReveals(wrap);
+}
+function openProject(p) {
+  const art = $('projectModalArt'); art.replaceChildren();
+  const img = el('img'); img.src = p.coverDataUrl || artPath(p); img.alt = title(p); art.append(img);
+  const meta = $('projectModalMeta'); meta.replaceChildren(el('span', 'meta-chip', catLabel(p.category)), el('span', 'meta-chip dim', levLabel(p.level)));
+  $('projectModalTitle').textContent = title(p); $('projectModalDescription').textContent = description(p);
+  const tags = $('projectModalTags'); tags.replaceChildren(); (p.tags || []).forEach(tag => tags.append(el('span', '', tag)));
+  const btn = $('projectDownload'); btn.hidden = p.hasCode !== true;
+  btn.onclick = p.hasCode === true ? () => downloadProject(p, btn) : null;
+  $('projectNoDownload').hidden = p.hasCode === true;
+  openDialog('projectDialog');
+}
+async function downloadProject(p, button) {
+  if (!state.fb?.db) { toast(tr('setupNeeded')); return; }
+  if (!state.user) { toast(tr('loginForDownload')); switchAuthMode('login'); openDialog('authDialog'); return; }
+  if (!p.id || p.hasCode !== true) { toast(tr('noDownload')); return; }
+  const old = button.textContent;
+  button.disabled = true; button.textContent = tr('downloading');
+  try {
+    // Check Auth again and force a server read, never an unauthenticated cached copy.
+    await state.fb.authLib.reload(state.user);
+    if (!state.user.emailVerified) { toast(tr('verifiedForDownload')); return; }
+    await state.fb.authLib.getIdToken(state.user, true);
+    const ref = state.fb.dbLib.doc(state.fb.db, 'projectCodeFiles', p.id);
+    const snap = await state.fb.dbLib.getDocFromServer(ref);
+    if (!snap.exists()) throw new Error('Code file missing. Ask admin to re-upload this project.');
+    const data = snap.data();
+    if (typeof data.codeText !== 'string' || data.codeText.length === 0) throw Error('Code file is empty');
+    const name = String(data.filename || 'CircuitX-project.ino').replace(/[^A-Za-z0-9_.-]/g, '_').slice(0, 160);
+    const blob = new Blob([data.codeText], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob), a = document.createElement('a');
+    a.href = url; a.download = name; document.body.append(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 30000);
+    toast(tr('downloadReady'));
+  } catch (error) { console.error('[CircuitX Firestore Download]', error); toast(errMessage(error, 'downloadFailed'), 8000); }
+  finally { button.disabled = false; button.textContent = old; }
+}
+function updateAccountButtons() {
+  $('authBtn').textContent = tr(state.user ? 'logout' : 'login');
+  $('adminBtn').hidden = !state.isAdmin;
+  $('verifyBanner').hidden = !state.user || state.user.emailVerified;
+  renderProjects();
+}
+async function refreshAccount() {
+  if (!state.fb) return;
+  const authUser = state.fb.auth.currentUser; state.user = authUser; state.isAdmin = false;
+  if (authUser) {
+    try {
+      await state.fb.authLib.reload(authUser);
+      if (state.fb.db && state.fb.dbLib && authUser.emailVerified && authUser.email?.toLowerCase() === ADMIN_EMAIL) {
+        await state.fb.authLib.getIdToken(authUser, true);
+        const snap = await state.fb.dbLib.getDoc(state.fb.dbLib.doc(state.fb.db, 'admins', authUser.uid));
+        state.isAdmin = snap.exists() && snap.data().active === true;
+      }
+    } catch (error) { console.warn('Account refresh failed', error); }
+  }
+  updateAccountButtons(); if (!state.isAdmin) closeDialog('adminDialog');
+}
+let firebaseConnecting = false;
+async function connectFirebase() {
+  if (firebaseConnecting) return;
+  if (!isFirebaseConfigured) {
+    const message = 'Firebase web configuration is missing. Update the firebaseConfig object embedded in index.html.';
+    setConnectionStatus(message); setAuthStatus(message); return;
+  }
+  if (state.fb?.auth) return;
+  firebaseConnecting = true;
+  setConnectionStatus('');
+  setAuthStatus('Connecting Firebase Authentication…', false);
+  try {
+    // Authentication is intentionally loaded FIRST.
+    // A Firestore SDK failure must not disable Google sign-in.
+    const ver = '13.2.0';
+    const [appLib, authLib] = await Promise.all([
+      import(`https://www.gstatic.com/firebasejs/${ver}/firebase-app.js`),
+      import(`https://www.gstatic.com/firebasejs/${ver}/firebase-auth.js`)
+    ]);
+    const app = appLib.getApps().length ? appLib.getApp() : appLib.initializeApp(firebaseConfig);
+    const auth = authLib.getAuth(app);
+    state.fb = { app, auth, authLib, db: null, dbLib: null };
+    console.info('[CircuitX] Firebase Authentication is ready on', location.origin);
+    setAuthStatus('Firebase ready. Click Continue with Google.', false);
+    authLib.onAuthStateChanged(auth, async () => {
+      try { await refreshAccount(); }
+      catch (error) { console.error('[CircuitX] Auth state update:', error); }
+    });
+
+    // Firestore works on Spark (Free) plan. Storage SDK is never imported.
+    try {
+      const dbLib = await import(`https://www.gstatic.com/firebasejs/${ver}/firebase-firestore.js`);
+      state.fb.dbLib = dbLib;
+      state.fb.db = dbLib.getFirestore(app);
+      await refreshAccount();
+      await loadPublicProjects();
+    } catch (optionalError) {
+      console.error('[CircuitX] Firestore setup failed:', optionalError);
+      setConnectionStatus('Google login is available, but Firestore could not load. ' + readableError(optionalError), { retry: false });
+    }
+  } catch (error) {
+    console.error('[CircuitX] Firebase initialization failed:', error);
+    const msg = 'Firebase SDK could not load. ' + readableError(error) + '. Check your internet connection and access to www.gstatic.com. GitHub Pages works via HTTPS.';
+    setConnectionStatus(msg, { retry: true }); setAuthStatus(msg);
+  } finally { firebaseConnecting = false; }
+}
+async function loadPublicProjects() {
+  if (!state.fb) return;
+  try {
+    const { db, dbLib } = state.fb;
+    const query = dbLib.query(dbLib.collection(db, 'projects'), dbLib.where('status', '==', 'published'), dbLib.limit(100));
+    const snap = await dbLib.getDocs(query);
+    const rows = snap.docs.map(d => ({ id: d.id, ...d.data(), demo: false }));
+    rows.sort((a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
+    state.live = rows.length > 0; state.projects = rows.length ? rows : sampleProjects;
+    renderProjects(); renderGallery(); counters();
+    // Cover thumbnails are in public project metadata; category SVG is the fallback.
+
+  } catch (error) { toast(errMessage(error, 'networkError')); }
+}
+async function handleAuth(event) {
+  event.preventDefault(); if (!state.fb?.auth) { setAuthStatus('Firebase Authentication has not loaded. Check connection status above and click Retry.'); return; }
+  const email = $('emailInput').value.trim(), password = $('passwordInput').value;
+  if (!email || password.length < 6) { toast(tr('fillRequired')); return; }
+  const btn = $('authSubmit'); btn.disabled = true;
+  try {
+    const { auth, authLib } = state.fb;
+    if (state.mode === 'register') {
+      const result = await authLib.createUserWithEmailAndPassword(auth, email, password);
+      await authLib.sendEmailVerification(result.user); toast(tr('registrationSent'));
+    } else {
+      await authLib.signInWithEmailAndPassword(auth, email, password); toast(tr('signedIn'));
+    }
+    await refreshAccount(); closeDialog('authDialog'); $('authForm').reset();
+  } catch (error) { toast(errMessage(error, 'authError')); }
+  finally { btn.disabled = false; }
+}
+async function googleSignIn() {
+  console.info('[CircuitX] Google login button clicked.', { host: location.hostname, firebaseReady: !!state.fb?.auth });
+  if (!state.fb?.auth) {
+    const msg = 'Firebase Authentication is not ready. Check the connection message. Use Live Server + internet; then retry.';
+    setAuthStatus(msg);
+    if (!firebaseConnecting) void connectFirebase();
+    return;
+  }
+  const btn = $('googleBtn');
+  if (btn.disabled) return;
+  btn.disabled = true;
+  setAuthStatus('Opening Google sign-in…', false);
+  try {
+    const { auth, authLib } = state.fb;
+    const provider = new authLib.GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: 'select_account' });
+    // Called directly from a user click, not after a delayed async import.
+    const result = await authLib.signInWithPopup(auth, provider);
+    console.info('[CircuitX] Google sign-in succeeded for UID:', result.user.uid);
+    await refreshAccount();
+    setAuthStatus('Login successful.', false);
+    closeDialog('authDialog');
+    toast(tr('signedIn'));
+  } catch (error) { reportGoogleError(error); }
+  finally { btn.disabled = false; }
+}
+async function handleForgotPassword() {
+  if (!state.fb) { toast(tr('setupNeeded')); return; }
+  const email = $('emailInput').value.trim(); if (!email) { toast(tr('fillRequired')); return; }
+  try { await state.fb.authLib.sendPasswordResetEmail(state.fb.auth, email); toast(tr('resetSent')); }
+  catch (error) { toast(errMessage(error, 'authError')); }
+}
+async function resendVerification() {
+  if (!state.user || state.user.emailVerified) return;
+  try { await state.fb.authLib.sendEmailVerification(state.user); toast(tr('verifySent')); }
+  catch (error) { toast(errMessage(error, 'authError')); }
+}
+async function checkVerification() {
+  await refreshAccount(); toast(tr(state.user?.emailVerified ? 'verified' : 'verificationPending'));
+}
+async function handleContact(event) {
+  event.preventDefault();
+  if (!state.fb?.db) { toast(tr('setupNeeded')); return; }
+  if (!state.user) { toast(tr('loginForContact')); switchAuthMode('login'); openDialog('authDialog'); return; }
+  if (!state.user.emailVerified) { toast(tr('verifiedForDownload')); return; }
+  const form = $('contactForm'), data = new FormData(form);
+  const name = String(data.get('name') || '').trim(), message = String(data.get('message') || '').trim();
+  if (name.length < 2 || name.length > 90 || message.length < 10 || message.length > 2000) { toast(tr('fillRequired')); return; }
+  const btn = $('contactSubmit'); btn.disabled = true; btn.textContent = tr('sending');
+  try {
+    const { db, dbLib } = state.fb;
+    await dbLib.addDoc(dbLib.collection(db, 'messages'), {
+      name, message, email: state.user.email, senderUid: state.user.uid,
+      status: 'new', createdAt: dbLib.serverTimestamp()
+    });
+    form.reset(); toast(tr('contactSent'));
+    if (state.isAdmin) await renderInbox();
+  } catch (error) { toast(errMessage(error, 'inboxError')); }
+  finally { btn.disabled = false; btn.textContent = tr('sendMessage'); }
+}
+// Firestore has a 1 MiB document cap; CircuitX deliberately uses a much smaller limit.
+// Only UTF-8 text source files are supported; ZIP, PDF and binary files are NOT supported.
+const MAX_CODE_BYTES = 80 * 1024;
+const MAX_IMAGE_INPUT_BYTES = 2 * 1024 * 1024;
+const MAX_COVER_DATA_URL = 75000;
+const SOURCE_EXTENSIONS = new Set(['ino', 'cpp', 'h', 'txt', 'md', 'json', 'py']);
+function filenameForSource(name) {
+  const safe = String(name).replace(/[^A-Za-z0-9_.-]/g, '_').slice(0, 160);
+  if (!safe || !SOURCE_EXTENSIONS.has(safe.split('.').pop().toLowerCase())) throw Error(tr('invalidFile'));
+  return safe;
+}
+async function readSourceCode(file, pasted, titleEn) {
+  const pastedCode = String(pasted || '');
+  if (file && pastedCode.trim()) throw Error(tr('chooseFileOrPaste'));
+  if (!file && !pastedCode.trim()) return null;
+  let codeText, filename;
+  if (file) {
+    filename = filenameForSource(file.name);
+    if (file.size > MAX_CODE_BYTES) throw Error(tr('codeLimit'));
+    const bytes = await file.arrayBuffer();
+    try { codeText = new TextDecoder('utf-8', { fatal: true }).decode(bytes); }
+    catch { throw Error(tr('utf8Only')); }
+  } else {
+    codeText = pastedCode;
+    filename = filenameForSource(titleEn.toLowerCase().replace(/\s+/g, '-') + '.ino');
+  }
+  if (!codeText.trim()) throw Error(tr('emptyCode'));
+  if (new TextEncoder().encode(codeText).length > MAX_CODE_BYTES) throw Error(tr('codeLimit'));
+  if (codeText.includes('\u0000')) throw Error(tr('utf8Only'));
+  return { codeText: codeText.replace(/^\uFEFF/, ''), filename };
+}
+async function makeCoverThumbnail(file) {
+  if (!file) return '';
+  if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type) || file.size > MAX_IMAGE_INPUT_BYTES) {
+    throw Error(tr('coverLimit'));
+  }
+  let img;
+  try { img = await createImageBitmap(file); }
+  catch { throw Error(tr('invalidFile')); }
+  try {
+    if (!img.width || !img.height) throw Error(tr('invalidFile'));
+    const canvas = document.createElement('canvas');
+    const ratio = Math.min(1, 700 / img.width, 440 / img.height);
+    canvas.width = Math.max(1, Math.round(img.width * ratio));
+    canvas.height = Math.max(1, Math.round(img.height * ratio));
+    const ctx = canvas.getContext('2d');
+    if (!ctx) throw Error(tr('invalidFile'));
+    ctx.fillStyle = '#f0f6ff'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    for (const quality of [0.76, 0.60, 0.45, 0.30]) {
+      const url = canvas.toDataURL('image/jpeg', quality);
+      if (url.length <= MAX_COVER_DATA_URL) return url;
+    }
+    throw Error(tr('coverLimit'));
+  } finally { img.close?.(); }
+}
+async function handlePublish(event) {
+  event.preventDefault();
+  if (!state.user?.emailVerified || !state.isAdmin || !state.fb?.db) { toast(tr('adminBlocked')); return; }
+  const form = $('projectForm'), data = new FormData(form);
+  const titleEn = String(data.get('titleEn') || '').trim(), descriptionEn = String(data.get('descriptionEn') || '').trim();
+  if (!titleEn || !descriptionEn) { toast(tr('fillRequired')); return; }
+  const cover = data.get('cover')?.size ? data.get('cover') : null;
+  const codeFile = data.get('code')?.size ? data.get('code') : null;
+  const { db, dbLib } = state.fb;
+  const btn = $('publishBtn'); btn.disabled = true; btn.textContent = tr('uploading');
+  try {
+    const code = await readSourceCode(codeFile, data.get('codeText'), titleEn);
+    const coverDataUrl = await makeCoverThumbnail(cover);
+    const projectRef = dbLib.doc(dbLib.collection(db, 'projects'));
+    const batch = dbLib.writeBatch(db);
+    batch.set(projectRef, {
+      titleEn, titleTa: String(data.get('titleTa') || '').trim(), descriptionEn,
+      descriptionTa: String(data.get('descriptionTa') || '').trim(),
+      category: String(data.get('category')), level: String(data.get('level')),
+      tags: String(data.get('tags') || '').split(',').map(x => x.trim().slice(0, 30)).filter(Boolean).slice(0, 10),
+      hasCode: Boolean(code), codeName: code?.filename || '', coverDataUrl,
+      status: 'published', createdBy: state.user.uid, createdAt: dbLib.serverTimestamp()
+    });
+    if (code) {
+      const codeRef = dbLib.doc(db, 'projectCodeFiles', projectRef.id);
+      batch.set(codeRef, {
+        projectId: projectRef.id, codeText: code.codeText, filename: code.filename,
+        createdBy: state.user.uid, createdAt: dbLib.serverTimestamp()
+      });
+    }
+    // Metadata + private code are committed as one atomic Firestore batch.
+    await batch.commit();
+    form.reset(); toast(tr('published')); await loadPublicProjects(); await renderAdminList();
+  } catch (error) {
+    console.error('[CircuitX Firestore Publish]', error);
+    toast(error?.code ? errMessage(error, 'publishFailed') : String(error.message || error), 8500);
+  } finally { btn.disabled = false; btn.textContent = tr('publish'); }
+}
+async function renderAdminList() {
+  if (!state.isAdmin || !state.fb) return;
+  const list = $('adminList'); list.replaceChildren(el('p', 'fine-print', tr('loading')));
+  try {
+    const { db, dbLib } = state.fb;
+    const snap = await dbLib.getDocs(dbLib.query(dbLib.collection(db, 'projects'), dbLib.limit(100)));
+    const projects = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+    projects.sort((a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
+    list.replaceChildren(); if (!projects.length) { list.append(el('p', 'fine-print', tr('noAdminProjects'))); return; }
+    projects.forEach(p => {
+      const row = el('div', 'admin-item'), info = el('div');
+      info.append(el('strong', '', title(p)), el('p', '', `${catLabel(p.category)} · ${levLabel(p.level)}`));
+      const button = el('button', 'danger-btn', tr('delete')); button.type = 'button';
+      button.addEventListener('click', () => deleteProject(p)); row.append(info, button); list.append(row);
+    });
+  } catch (error) { list.replaceChildren(el('p', 'fine-print', errMessage(error, 'networkError'))); }
+}
+async function deleteProject(p) {
+  if (!state.isAdmin || !state.user?.emailVerified || !state.fb?.db || !confirm(tr('deleteConfirm'))) return;
+  const { db, dbLib } = state.fb;
+  try {
+    const batch = dbLib.writeBatch(db);
+    batch.delete(dbLib.doc(db, 'projects', p.id));
+    if (p.hasCode === true) batch.delete(dbLib.doc(db, 'projectCodeFiles', p.id));
+    await batch.commit();
+    toast(tr('deleted')); await loadPublicProjects(); await renderAdminList();
+  } catch (error) { toast(errMessage(error, 'removeFailed')); }
+}
+async function renderInbox() {
+  if (!state.isAdmin || !state.fb) return;
+  const list = $('inboxList'); list.replaceChildren(el('p', 'fine-print', tr('loading')));
+  try {
+    const { db, dbLib } = state.fb;
+    const snap = await dbLib.getDocs(dbLib.query(dbLib.collection(db, 'messages'), dbLib.limit(100)));
+    const messages = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+    messages.sort((a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
+    list.replaceChildren(); if (!messages.length) { list.append(el('p', 'fine-print', tr('noMessages'))); return; }
+    messages.forEach(m => {
+      const item = el('div', 'admin-item inbox-item'), body = el('div', 'inbox-body');
+      const date = m.createdAt?.toDate?.()?.toLocaleDateString(state.lang === 'ta' ? 'ta-LK' : 'en-US') || '';
+      body.append(el('strong', '', String(m.name || '')), el('small', '', ` · ${String(m.email || '')} · ${date}`), el('p', '', String(m.message || '')));
+      item.append(body);
+      if (m.status !== 'read') {
+        const button = el('button', 'soft-btn small', tr('markRead')); button.type = 'button';
+        button.addEventListener('click', async () => {
+          button.disabled = true;
+          try { await dbLib.updateDoc(dbLib.doc(db, 'messages', m.id), { status: 'read' }); await renderInbox(); }
+          catch (error) { button.disabled = false; toast(errMessage(error, 'inboxError')); }
+        });
+        item.append(button);
+      } else item.append(el('span', 'meta-chip dim', tr('messageRead')));
+      list.append(item);
+    });
+  } catch (error) { list.replaceChildren(el('p', 'fine-print', errMessage(error, 'inboxError'))); }
+}
+function bindControls() {
+  $('year').textContent = new Date().getFullYear();
+  $('langBtn').addEventListener('click', () => {
+    state.lang = state.lang === 'en' ? 'ta' : 'en'; localStorage.setItem('cx_language', state.lang); renderTranslations();
+  });
+  $('themeBtn').addEventListener('click', () => {
+    state.theme = state.theme === 'light' ? 'dark' : 'light'; localStorage.setItem('cx_theme', state.theme); applyTheme();
+  });
+  $('menuBtn').addEventListener('click', () => {
+    const open = $('nav').classList.toggle('open'); $('menuBtn').setAttribute('aria-expanded', String(open));
+  });
+  document.querySelectorAll('#nav a').forEach(a => a.addEventListener('click', () => {
+    $('nav').classList.remove('open'); $('menuBtn').setAttribute('aria-expanded', 'false');
+  }));
+  $('searchInput').addEventListener('input', renderProjects);
+  $('levelFilter').addEventListener('change', renderProjects);
+  $('authBtn').addEventListener('click', async () => {
+    if (state.user) {
+      try { await state.fb.authLib.signOut(state.fb.auth); state.user = null; state.isAdmin = false; updateAccountButtons(); toast(tr('signedOut')); }
+      catch (error) { toast(errMessage(error, 'authError')); }
+    } else {
+      switchAuthMode('login'); openDialog('authDialog');
+      if (!state.fb?.auth) setAuthStatus(firebaseConnecting ? 'Firebase is connecting. Try Google sign-in once ready.' : 'Firebase not connected. Check the connection status at the top and click Retry.');
+    }
+  });
+  $('adminBtn').addEventListener('click', () => {
+    if (!state.isAdmin) { toast(tr('adminBlocked')); return; }
+    openDialog('adminDialog'); renderAdminList(); renderInbox();
+  });
+  $('loginTab').addEventListener('click', () => switchAuthMode('login'));
+  $('registerTab').addEventListener('click', () => switchAuthMode('register'));
+  $('authForm').addEventListener('submit', handleAuth);
+  $('googleBtn').addEventListener('click', googleSignIn);
+  $('retryFirebaseBtn').addEventListener('click', () => { setAuthStatus('Retrying Firebase connection…', false); void connectFirebase(); });
+  $('forgotBtn').addEventListener('click', handleForgotPassword);
+  $('resendBtn').addEventListener('click', resendVerification);
+  $('checkVerifiedBtn').addEventListener('click', checkVerification);
+  $('contactForm').addEventListener('submit', handleContact);
+  $('projectForm').addEventListener('submit', handlePublish);
+  $('refreshBtn').addEventListener('click', renderAdminList);
+  $('refreshInboxBtn').addEventListener('click', renderInbox);
+  document.querySelectorAll('[data-close]').forEach(button => button.addEventListener('click', () => closeDialog(button.dataset.close)));
+  document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); }));
+}
+window.addEventListener('unhandledrejection', event => {
+  console.error('[CircuitX] Unhandled promise rejection:', event.reason);
+  if (!state.fb?.auth) setConnectionStatus('JavaScript error: ' + readableError(event.reason), { retry: true });
+});
+window.__circuitxModuleReady = true;
+applyTheme(); bindControls(); renderTranslations(); counters(); setupReveals(); void connectFirebase();
+
+</script>
+  <script>
+  // Safety net: show an actionable message when the inline CircuitX module never executes.
   setTimeout(() => {
     if (!window.__circuitxModuleReady) {
       const box = document.getElementById('firebaseStatus');
       if (box) {
         box.hidden = false;
-        box.textContent = 'CircuitX JavaScript did not start. Open VS Code > circketx-website folder, run index.html with Live Server, check src/app.js exists, then open Chrome F12 > Console.';
+        box.textContent = 'CircuitX JavaScript did not start. Press F12 → Console for details. This single-file edition does not need a src folder.';
       }
     }
   }, 6000);
